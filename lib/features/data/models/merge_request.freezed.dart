@@ -14,10 +14,24 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+MergeRequest _$MergeRequestFromJson(Map<String, dynamic> json) {
+  return _MergeRequest.fromJson(json);
+}
+
 /// @nodoc
 mixin _$MergeRequest {
-  AuthorEntity get authorEntity => throw _privateConstructorUsedError;
+  @JsonKey(name: 'author')
+  Author get author => throw _privateConstructorUsedError;
+  @JsonKey(name: 'created_at')
+  DateTime get createdAt => throw _privateConstructorUsedError;
+  @JsonKey(name: 'draft')
+  bool get draft => throw _privateConstructorUsedError;
+  int get iid => throw _privateConstructorUsedError;
+  String get state => throw _privateConstructorUsedError;
+  String get description => throw _privateConstructorUsedError;
+  List<Discussion> get discussion => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MergeRequestCopyWith<MergeRequest> get copyWith =>
       throw _privateConstructorUsedError;
@@ -28,7 +42,16 @@ abstract class $MergeRequestCopyWith<$Res> {
   factory $MergeRequestCopyWith(
           MergeRequest value, $Res Function(MergeRequest) then) =
       _$MergeRequestCopyWithImpl<$Res>;
-  $Res call({AuthorEntity authorEntity});
+  $Res call(
+      {@JsonKey(name: 'author') Author author,
+      @JsonKey(name: 'created_at') DateTime createdAt,
+      @JsonKey(name: 'draft') bool draft,
+      int iid,
+      String state,
+      String description,
+      List<Discussion> discussion});
+
+  $AuthorCopyWith<$Res> get author;
 }
 
 /// @nodoc
@@ -41,14 +64,51 @@ class _$MergeRequestCopyWithImpl<$Res> implements $MergeRequestCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? authorEntity = freezed,
+    Object? author = freezed,
+    Object? createdAt = freezed,
+    Object? draft = freezed,
+    Object? iid = freezed,
+    Object? state = freezed,
+    Object? description = freezed,
+    Object? discussion = freezed,
   }) {
     return _then(_value.copyWith(
-      authorEntity: authorEntity == freezed
-          ? _value.authorEntity
-          : authorEntity // ignore: cast_nullable_to_non_nullable
-              as AuthorEntity,
+      author: author == freezed
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as Author,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      draft: draft == freezed
+          ? _value.draft
+          : draft // ignore: cast_nullable_to_non_nullable
+              as bool,
+      iid: iid == freezed
+          ? _value.iid
+          : iid // ignore: cast_nullable_to_non_nullable
+              as int,
+      state: state == freezed
+          ? _value.state
+          : state // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String,
+      discussion: discussion == freezed
+          ? _value.discussion
+          : discussion // ignore: cast_nullable_to_non_nullable
+              as List<Discussion>,
     ));
+  }
+
+  @override
+  $AuthorCopyWith<$Res> get author {
+    return $AuthorCopyWith<$Res>(_value.author, (value) {
+      return _then(_value.copyWith(author: value));
+    });
   }
 }
 
@@ -59,7 +119,17 @@ abstract class _$MergeRequestCopyWith<$Res>
           _MergeRequest value, $Res Function(_MergeRequest) then) =
       __$MergeRequestCopyWithImpl<$Res>;
   @override
-  $Res call({AuthorEntity authorEntity});
+  $Res call(
+      {@JsonKey(name: 'author') Author author,
+      @JsonKey(name: 'created_at') DateTime createdAt,
+      @JsonKey(name: 'draft') bool draft,
+      int iid,
+      String state,
+      String description,
+      List<Discussion> discussion});
+
+  @override
+  $AuthorCopyWith<$Res> get author;
 }
 
 /// @nodoc
@@ -74,28 +144,88 @@ class __$MergeRequestCopyWithImpl<$Res> extends _$MergeRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? authorEntity = freezed,
+    Object? author = freezed,
+    Object? createdAt = freezed,
+    Object? draft = freezed,
+    Object? iid = freezed,
+    Object? state = freezed,
+    Object? description = freezed,
+    Object? discussion = freezed,
   }) {
     return _then(_MergeRequest(
-      authorEntity: authorEntity == freezed
-          ? _value.authorEntity
-          : authorEntity // ignore: cast_nullable_to_non_nullable
-              as AuthorEntity,
+      author: author == freezed
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as Author,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      draft: draft == freezed
+          ? _value.draft
+          : draft // ignore: cast_nullable_to_non_nullable
+              as bool,
+      iid: iid == freezed
+          ? _value.iid
+          : iid // ignore: cast_nullable_to_non_nullable
+              as int,
+      state: state == freezed
+          ? _value.state
+          : state // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String,
+      discussion: discussion == freezed
+          ? _value.discussion
+          : discussion // ignore: cast_nullable_to_non_nullable
+              as List<Discussion>,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_MergeRequest implements _MergeRequest {
-  const _$_MergeRequest({required this.authorEntity});
+  const _$_MergeRequest(
+      {@JsonKey(name: 'author') required this.author,
+      @JsonKey(name: 'created_at') required this.createdAt,
+      @JsonKey(name: 'draft') required this.draft,
+      required this.iid,
+      required this.state,
+      required this.description,
+      required final List<Discussion> discussion})
+      : _discussion = discussion;
+
+  factory _$_MergeRequest.fromJson(Map<String, dynamic> json) =>
+      _$$_MergeRequestFromJson(json);
 
   @override
-  final AuthorEntity authorEntity;
+  @JsonKey(name: 'author')
+  final Author author;
+  @override
+  @JsonKey(name: 'created_at')
+  final DateTime createdAt;
+  @override
+  @JsonKey(name: 'draft')
+  final bool draft;
+  @override
+  final int iid;
+  @override
+  final String state;
+  @override
+  final String description;
+  final List<Discussion> _discussion;
+  @override
+  List<Discussion> get discussion {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_discussion);
+  }
 
   @override
   String toString() {
-    return 'MergeRequest(authorEntity: $authorEntity)';
+    return 'MergeRequest(author: $author, createdAt: $createdAt, draft: $draft, iid: $iid, state: $state, description: $description, discussion: $discussion)';
   }
 
   @override
@@ -103,26 +233,70 @@ class _$_MergeRequest implements _MergeRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _MergeRequest &&
+            const DeepCollectionEquality().equals(other.author, author) &&
+            const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
+            const DeepCollectionEquality().equals(other.draft, draft) &&
+            const DeepCollectionEquality().equals(other.iid, iid) &&
+            const DeepCollectionEquality().equals(other.state, state) &&
             const DeepCollectionEquality()
-                .equals(other.authorEntity, authorEntity));
+                .equals(other.description, description) &&
+            const DeepCollectionEquality()
+                .equals(other.discussion, discussion));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(authorEntity));
+      runtimeType,
+      const DeepCollectionEquality().hash(author),
+      const DeepCollectionEquality().hash(createdAt),
+      const DeepCollectionEquality().hash(draft),
+      const DeepCollectionEquality().hash(iid),
+      const DeepCollectionEquality().hash(state),
+      const DeepCollectionEquality().hash(description),
+      const DeepCollectionEquality().hash(discussion));
 
   @JsonKey(ignore: true)
   @override
   _$MergeRequestCopyWith<_MergeRequest> get copyWith =>
       __$MergeRequestCopyWithImpl<_MergeRequest>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_MergeRequestToJson(this);
+  }
 }
 
 abstract class _MergeRequest implements MergeRequest {
-  const factory _MergeRequest({required final AuthorEntity authorEntity}) =
-      _$_MergeRequest;
+  const factory _MergeRequest(
+      {@JsonKey(name: 'author') required final Author author,
+      @JsonKey(name: 'created_at') required final DateTime createdAt,
+      @JsonKey(name: 'draft') required final bool draft,
+      required final int iid,
+      required final String state,
+      required final String description,
+      required final List<Discussion> discussion}) = _$_MergeRequest;
+
+  factory _MergeRequest.fromJson(Map<String, dynamic> json) =
+      _$_MergeRequest.fromJson;
 
   @override
-  AuthorEntity get authorEntity => throw _privateConstructorUsedError;
+  @JsonKey(name: 'author')
+  Author get author => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'created_at')
+  DateTime get createdAt => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'draft')
+  bool get draft => throw _privateConstructorUsedError;
+  @override
+  int get iid => throw _privateConstructorUsedError;
+  @override
+  String get state => throw _privateConstructorUsedError;
+  @override
+  String get description => throw _privateConstructorUsedError;
+  @override
+  List<Discussion> get discussion => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MergeRequestCopyWith<_MergeRequest> get copyWith =>

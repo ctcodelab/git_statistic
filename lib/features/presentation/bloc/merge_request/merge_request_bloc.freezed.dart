@@ -168,19 +168,20 @@ mixin _$MergeRequestState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
     TResult Function() $default, {
-    required TResult Function(List<MergeRequestEntity> mergeRequests) loaded,
+    required TResult Function(Map<String, List<MergeRequest>> mergeRequests)
+        loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
     TResult Function()? $default, {
-    TResult Function(List<MergeRequestEntity> mergeRequests)? loaded,
+    TResult Function(Map<String, List<MergeRequest>> mergeRequests)? loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function()? $default, {
-    TResult Function(List<MergeRequestEntity> mergeRequests)? loaded,
+    TResult Function(Map<String, List<MergeRequest>> mergeRequests)? loaded,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -264,7 +265,8 @@ class _$_MergeRequestState implements _MergeRequestState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
     TResult Function() $default, {
-    required TResult Function(List<MergeRequestEntity> mergeRequests) loaded,
+    required TResult Function(Map<String, List<MergeRequest>> mergeRequests)
+        loaded,
   }) {
     return $default();
   }
@@ -273,7 +275,7 @@ class _$_MergeRequestState implements _MergeRequestState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
     TResult Function()? $default, {
-    TResult Function(List<MergeRequestEntity> mergeRequests)? loaded,
+    TResult Function(Map<String, List<MergeRequest>> mergeRequests)? loaded,
   }) {
     return $default?.call();
   }
@@ -282,7 +284,7 @@ class _$_MergeRequestState implements _MergeRequestState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function()? $default, {
-    TResult Function(List<MergeRequestEntity> mergeRequests)? loaded,
+    TResult Function(Map<String, List<MergeRequest>> mergeRequests)? loaded,
     required TResult orElse(),
   }) {
     if ($default != null) {
@@ -331,7 +333,7 @@ abstract class _MergeRequestState implements MergeRequestState {
 abstract class _$LoadedCopyWith<$Res> {
   factory _$LoadedCopyWith(_Loaded value, $Res Function(_Loaded) then) =
       __$LoadedCopyWithImpl<$Res>;
-  $Res call({List<MergeRequestEntity> mergeRequests});
+  $Res call({Map<String, List<MergeRequest>> mergeRequests});
 }
 
 /// @nodoc
@@ -351,7 +353,7 @@ class __$LoadedCopyWithImpl<$Res> extends _$MergeRequestStateCopyWithImpl<$Res>
       mergeRequests: mergeRequests == freezed
           ? _value.mergeRequests
           : mergeRequests // ignore: cast_nullable_to_non_nullable
-              as List<MergeRequestEntity>,
+              as Map<String, List<MergeRequest>>,
     ));
   }
 }
@@ -359,14 +361,15 @@ class __$LoadedCopyWithImpl<$Res> extends _$MergeRequestStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_Loaded implements _Loaded {
-  const _$_Loaded({required final List<MergeRequestEntity> mergeRequests})
+  const _$_Loaded(
+      {required final Map<String, List<MergeRequest>> mergeRequests})
       : _mergeRequests = mergeRequests;
 
-  final List<MergeRequestEntity> _mergeRequests;
+  final Map<String, List<MergeRequest>> _mergeRequests;
   @override
-  List<MergeRequestEntity> get mergeRequests {
+  Map<String, List<MergeRequest>> get mergeRequests {
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_mergeRequests);
+    return EqualUnmodifiableMapView(_mergeRequests);
   }
 
   @override
@@ -396,7 +399,8 @@ class _$_Loaded implements _Loaded {
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
     TResult Function() $default, {
-    required TResult Function(List<MergeRequestEntity> mergeRequests) loaded,
+    required TResult Function(Map<String, List<MergeRequest>> mergeRequests)
+        loaded,
   }) {
     return loaded(mergeRequests);
   }
@@ -405,7 +409,7 @@ class _$_Loaded implements _Loaded {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
     TResult Function()? $default, {
-    TResult Function(List<MergeRequestEntity> mergeRequests)? loaded,
+    TResult Function(Map<String, List<MergeRequest>> mergeRequests)? loaded,
   }) {
     return loaded?.call(mergeRequests);
   }
@@ -414,7 +418,7 @@ class _$_Loaded implements _Loaded {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function()? $default, {
-    TResult Function(List<MergeRequestEntity> mergeRequests)? loaded,
+    TResult Function(Map<String, List<MergeRequest>> mergeRequests)? loaded,
     required TResult orElse(),
   }) {
     if (loaded != null) {
@@ -457,9 +461,10 @@ class _$_Loaded implements _Loaded {
 
 abstract class _Loaded implements MergeRequestState {
   const factory _Loaded(
-      {required final List<MergeRequestEntity> mergeRequests}) = _$_Loaded;
+          {required final Map<String, List<MergeRequest>> mergeRequests}) =
+      _$_Loaded;
 
-  List<MergeRequestEntity> get mergeRequests =>
+  Map<String, List<MergeRequest>> get mergeRequests =>
       throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$LoadedCopyWith<_Loaded> get copyWith => throw _privateConstructorUsedError;
