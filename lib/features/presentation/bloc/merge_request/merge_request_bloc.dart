@@ -99,6 +99,8 @@ class MergeRequestBloc extends Bloc<MergeRequestEvent, MergeRequestState> {
         emit(
           MergeRequestState.loaded(
             mergeRequests: devs,
+            startDate: firstDateOfPrevWeek,
+            endDate: lastDateOfPrevWeek,
           ),
         );
       },
@@ -117,5 +119,7 @@ class MergeRequestState with _$MergeRequestState {
 
   const factory MergeRequestState.loaded({
     required Map<String, List<MergeRequest>> mergeRequests,
+    required DateTime startDate,
+    required DateTime endDate,
   }) = _Loaded;
 }

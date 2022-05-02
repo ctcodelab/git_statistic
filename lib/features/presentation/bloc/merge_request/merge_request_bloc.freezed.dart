@@ -168,20 +168,25 @@ mixin _$MergeRequestState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
     TResult Function() $default, {
-    required TResult Function(Map<String, List<MergeRequest>> mergeRequests)
+    required TResult Function(Map<String, List<MergeRequest>> mergeRequests,
+            DateTime startDate, DateTime endDate)
         loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
     TResult Function()? $default, {
-    TResult Function(Map<String, List<MergeRequest>> mergeRequests)? loaded,
+    TResult Function(Map<String, List<MergeRequest>> mergeRequests,
+            DateTime startDate, DateTime endDate)?
+        loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function()? $default, {
-    TResult Function(Map<String, List<MergeRequest>> mergeRequests)? loaded,
+    TResult Function(Map<String, List<MergeRequest>> mergeRequests,
+            DateTime startDate, DateTime endDate)?
+        loaded,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -265,7 +270,8 @@ class _$_MergeRequestState implements _MergeRequestState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
     TResult Function() $default, {
-    required TResult Function(Map<String, List<MergeRequest>> mergeRequests)
+    required TResult Function(Map<String, List<MergeRequest>> mergeRequests,
+            DateTime startDate, DateTime endDate)
         loaded,
   }) {
     return $default();
@@ -275,7 +281,9 @@ class _$_MergeRequestState implements _MergeRequestState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
     TResult Function()? $default, {
-    TResult Function(Map<String, List<MergeRequest>> mergeRequests)? loaded,
+    TResult Function(Map<String, List<MergeRequest>> mergeRequests,
+            DateTime startDate, DateTime endDate)?
+        loaded,
   }) {
     return $default?.call();
   }
@@ -284,7 +292,9 @@ class _$_MergeRequestState implements _MergeRequestState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function()? $default, {
-    TResult Function(Map<String, List<MergeRequest>> mergeRequests)? loaded,
+    TResult Function(Map<String, List<MergeRequest>> mergeRequests,
+            DateTime startDate, DateTime endDate)?
+        loaded,
     required TResult orElse(),
   }) {
     if ($default != null) {
@@ -333,7 +343,10 @@ abstract class _MergeRequestState implements MergeRequestState {
 abstract class _$LoadedCopyWith<$Res> {
   factory _$LoadedCopyWith(_Loaded value, $Res Function(_Loaded) then) =
       __$LoadedCopyWithImpl<$Res>;
-  $Res call({Map<String, List<MergeRequest>> mergeRequests});
+  $Res call(
+      {Map<String, List<MergeRequest>> mergeRequests,
+      DateTime startDate,
+      DateTime endDate});
 }
 
 /// @nodoc
@@ -348,12 +361,22 @@ class __$LoadedCopyWithImpl<$Res> extends _$MergeRequestStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? mergeRequests = freezed,
+    Object? startDate = freezed,
+    Object? endDate = freezed,
   }) {
     return _then(_Loaded(
       mergeRequests: mergeRequests == freezed
           ? _value.mergeRequests
           : mergeRequests // ignore: cast_nullable_to_non_nullable
               as Map<String, List<MergeRequest>>,
+      startDate: startDate == freezed
+          ? _value.startDate
+          : startDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      endDate: endDate == freezed
+          ? _value.endDate
+          : endDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -362,7 +385,9 @@ class __$LoadedCopyWithImpl<$Res> extends _$MergeRequestStateCopyWithImpl<$Res>
 
 class _$_Loaded implements _Loaded {
   const _$_Loaded(
-      {required final Map<String, List<MergeRequest>> mergeRequests})
+      {required final Map<String, List<MergeRequest>> mergeRequests,
+      required this.startDate,
+      required this.endDate})
       : _mergeRequests = mergeRequests;
 
   final Map<String, List<MergeRequest>> _mergeRequests;
@@ -373,8 +398,13 @@ class _$_Loaded implements _Loaded {
   }
 
   @override
+  final DateTime startDate;
+  @override
+  final DateTime endDate;
+
+  @override
   String toString() {
-    return 'MergeRequestState.loaded(mergeRequests: $mergeRequests)';
+    return 'MergeRequestState.loaded(mergeRequests: $mergeRequests, startDate: $startDate, endDate: $endDate)';
   }
 
   @override
@@ -383,12 +413,17 @@ class _$_Loaded implements _Loaded {
         (other.runtimeType == runtimeType &&
             other is _Loaded &&
             const DeepCollectionEquality()
-                .equals(other.mergeRequests, mergeRequests));
+                .equals(other.mergeRequests, mergeRequests) &&
+            const DeepCollectionEquality().equals(other.startDate, startDate) &&
+            const DeepCollectionEquality().equals(other.endDate, endDate));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(mergeRequests));
+      runtimeType,
+      const DeepCollectionEquality().hash(mergeRequests),
+      const DeepCollectionEquality().hash(startDate),
+      const DeepCollectionEquality().hash(endDate));
 
   @JsonKey(ignore: true)
   @override
@@ -399,30 +434,35 @@ class _$_Loaded implements _Loaded {
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
     TResult Function() $default, {
-    required TResult Function(Map<String, List<MergeRequest>> mergeRequests)
+    required TResult Function(Map<String, List<MergeRequest>> mergeRequests,
+            DateTime startDate, DateTime endDate)
         loaded,
   }) {
-    return loaded(mergeRequests);
+    return loaded(mergeRequests, startDate, endDate);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
     TResult Function()? $default, {
-    TResult Function(Map<String, List<MergeRequest>> mergeRequests)? loaded,
+    TResult Function(Map<String, List<MergeRequest>> mergeRequests,
+            DateTime startDate, DateTime endDate)?
+        loaded,
   }) {
-    return loaded?.call(mergeRequests);
+    return loaded?.call(mergeRequests, startDate, endDate);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function()? $default, {
-    TResult Function(Map<String, List<MergeRequest>> mergeRequests)? loaded,
+    TResult Function(Map<String, List<MergeRequest>> mergeRequests,
+            DateTime startDate, DateTime endDate)?
+        loaded,
     required TResult orElse(),
   }) {
     if (loaded != null) {
-      return loaded(mergeRequests);
+      return loaded(mergeRequests, startDate, endDate);
     }
     return orElse();
   }
@@ -461,11 +501,14 @@ class _$_Loaded implements _Loaded {
 
 abstract class _Loaded implements MergeRequestState {
   const factory _Loaded(
-          {required final Map<String, List<MergeRequest>> mergeRequests}) =
-      _$_Loaded;
+      {required final Map<String, List<MergeRequest>> mergeRequests,
+      required final DateTime startDate,
+      required final DateTime endDate}) = _$_Loaded;
 
   Map<String, List<MergeRequest>> get mergeRequests =>
       throw _privateConstructorUsedError;
+  DateTime get startDate => throw _privateConstructorUsedError;
+  DateTime get endDate => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$LoadedCopyWith<_Loaded> get copyWith => throw _privateConstructorUsedError;
 }
