@@ -13,4 +13,10 @@ class Calendar {
         dateTime.subtract(const Duration(days: 7));
     return findFirstDateOfTheWeek(sameWeekDayOfLastWeek);
   }
+
+  /// Find last date of the week which contains provided date.
+  static DateTime findLastDateOfTheWeek(DateTime dateTime) {
+    return dateTime
+        .add(Duration(days: DateTime.daysPerWeek - dateTime.weekday));
+  }
 }

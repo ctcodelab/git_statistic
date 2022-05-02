@@ -22,13 +22,30 @@ class MergeRequestBloc extends Bloc<MergeRequestEvent, MergeRequestState> {
   ) async {
     await event.when(
       fetch: () async {
+        final now = DateTime.now();
+        final firstDateOfPrevWeek = Calendar.findFirstDateOfPreviousWeek(
+          DateTime(
+            now.year,
+            now.month,
+            now.day,
+          ),
+        );
+        final lastDateOfPrevWeek = Calendar.findLastDateOfTheWeek(
+          DateTime(
+            firstDateOfPrevWeek.year,
+            firstDateOfPrevWeek.month,
+            firstDateOfPrevWeek.day,
+            23,
+            59,
+            59,
+          ),
+        );
+
         final mergeRequests = await mergeRequestUsecase(
           RequestEntity(
             projectId: 4174,
-            createdAt: Calendar.findFirstDateOfPreviousWeek(
-              Calendar.findFirstDateOfTheWeek(DateTime.now()),
-            ),
-            createdBefore: Calendar.findFirstDateOfTheWeek(DateTime.now()),
+            createdAt: firstDateOfPrevWeek.subtract(const Duration(seconds: 1)),
+            createdBefore: lastDateOfPrevWeek.add(const Duration(seconds: 1)),
           ),
         );
 
