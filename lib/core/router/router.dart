@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iqvia_kpi/core/constants/route_path.dart';
-import 'package:iqvia_kpi/features/merge_requests/presentation/pages/home_page.dart';
+import 'package:iqvia_kpi/core/ui/pages/home_page.dart';
+import 'package:iqvia_kpi/features/onboarding/presentation/pages/onboarding_page.dart';
 
 Route generateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -8,6 +9,11 @@ Route generateRoute(RouteSettings settings) {
       return MaterialPageRoute(
         settings: const RouteSettings(name: RoutePath.homeScreen),
         builder: (_) => const HomePage(),
+      );
+    case RoutePath.onboardingScreen:
+      return MaterialPageRoute(
+        settings: const RouteSettings(name: RoutePath.onboardingScreen),
+        builder: (_) => const OnboardingPage(),
       );
     default:
       return MaterialPageRoute(

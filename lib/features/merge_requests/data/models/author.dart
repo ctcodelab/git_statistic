@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:iqvia_kpi/features/merge_requests/domain/entetties/author_entity.dart';
+import 'package:iqvia_kpi/features/merge_requests/domain/entities/author_entity.dart';
 
 part 'author.freezed.dart';
 part 'author.g.dart';

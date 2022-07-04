@@ -106,11 +106,11 @@ class _$MergeRequestCopyWithImpl<$Res> implements $MergeRequestCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$MergeRequestCopyWith<$Res>
+abstract class _$$_MergeRequestCopyWith<$Res>
     implements $MergeRequestCopyWith<$Res> {
-  factory _$MergeRequestCopyWith(
-          _MergeRequest value, $Res Function(_MergeRequest) then) =
-      __$MergeRequestCopyWithImpl<$Res>;
+  factory _$$_MergeRequestCopyWith(
+          _$_MergeRequest value, $Res Function(_$_MergeRequest) then) =
+      __$$_MergeRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'author') Author author,
@@ -125,14 +125,15 @@ abstract class _$MergeRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MergeRequestCopyWithImpl<$Res> extends _$MergeRequestCopyWithImpl<$Res>
-    implements _$MergeRequestCopyWith<$Res> {
-  __$MergeRequestCopyWithImpl(
-      _MergeRequest _value, $Res Function(_MergeRequest) _then)
-      : super(_value, (v) => _then(v as _MergeRequest));
+class __$$_MergeRequestCopyWithImpl<$Res>
+    extends _$MergeRequestCopyWithImpl<$Res>
+    implements _$$_MergeRequestCopyWith<$Res> {
+  __$$_MergeRequestCopyWithImpl(
+      _$_MergeRequest _value, $Res Function(_$_MergeRequest) _then)
+      : super(_value, (v) => _then(v as _$_MergeRequest));
 
   @override
-  _MergeRequest get _value => super._value as _MergeRequest;
+  _$_MergeRequest get _value => super._value as _$_MergeRequest;
 
   @override
   $Res call({
@@ -143,7 +144,7 @@ class __$MergeRequestCopyWithImpl<$Res> extends _$MergeRequestCopyWithImpl<$Res>
     Object? state = freezed,
     Object? description = freezed,
   }) {
-    return _then(_MergeRequest(
+    return _then(_$_MergeRequest(
       author: author == freezed
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
@@ -211,7 +212,7 @@ class _$_MergeRequest implements _MergeRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MergeRequest &&
+            other is _$_MergeRequest &&
             const DeepCollectionEquality().equals(other.author, author) &&
             const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
             const DeepCollectionEquality().equals(other.draft, draft) &&
@@ -234,8 +235,8 @@ class _$_MergeRequest implements _MergeRequest {
 
   @JsonKey(ignore: true)
   @override
-  _$MergeRequestCopyWith<_MergeRequest> get copyWith =>
-      __$MergeRequestCopyWithImpl<_MergeRequest>(this, _$identity);
+  _$$_MergeRequestCopyWith<_$_MergeRequest> get copyWith =>
+      __$$_MergeRequestCopyWithImpl<_$_MergeRequest>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -272,6 +273,6 @@ abstract class _MergeRequest implements MergeRequest {
   String get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MergeRequestCopyWith<_MergeRequest> get copyWith =>
+  _$$_MergeRequestCopyWith<_$_MergeRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }

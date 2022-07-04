@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:iqvia_kpi/features/merge_requests/data/models/merge_request.dart';
+import 'package:iqvia_kpi/features/merge_requests/domain/entities/merge_request_entity.dart';
 
 class RowWidget extends StatelessWidget {
   const RowWidget({
@@ -10,7 +10,7 @@ class RowWidget extends StatelessWidget {
   }) : super(key: key);
 
   final String devName;
-  final List<MergeRequest> mrs;
+  final List<MergeRequestEntity> mrs;
 
   @override
   Widget build(BuildContext context) {
@@ -49,25 +49,6 @@ class RowWidget extends StatelessWidget {
                 ),
               ),
             ),
-            // const VerticalDivider(
-            //   color: Colors.black,
-            //   thickness: 1,
-            // ),
-            // Expanded(
-            //   child: GestureDetector(
-            //     behavior: HitTestBehavior.opaque,
-            //     onDoubleTap: () {
-            //       _showSnackBar(context);
-            //       // Clipboard.setData(
-            //       //   ClipboardData(text: _getDiscussionsCount(mrs).toString()),
-            //       // );
-            //     },
-            //     child: const Center(
-            //       // child: Text(_getDiscussionsCount(mrs).toString()),
-            //       child: Text(''),
-            //     ),
-            //   ),
-            // ),
           ],
         ),
       ),

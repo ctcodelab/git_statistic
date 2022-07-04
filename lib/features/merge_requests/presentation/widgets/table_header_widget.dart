@@ -42,14 +42,6 @@ class TableHeaderWidget extends StatelessWidget {
               ),
             ),
           ),
-          // const Expanded(
-          //   child: Center(
-          //     child: Text(
-          //       'Discussions',
-          //       style: TextStyle(fontWeight: FontWeight.bold),
-          //     ),
-          //   ),
-          // ),
         ],
       ),
     );

@@ -1,9 +1,10 @@
-import 'package:iqvia_kpi/core/services/git_service.dart';
-import 'package:iqvia_kpi/core/services/gitlab_service.dart';
+import 'package:iqvia_kpi/core/services/git/git_service.dart';
+import 'package:iqvia_kpi/core/services/git/gitlab_service.dart';
 import 'package:iqvia_kpi/core/utils/locator.dart';
 import 'package:iqvia_kpi/features/merge_requests/data/datasources/merge_requests_datasource.dart';
 import 'package:iqvia_kpi/features/merge_requests/data/models/merge_request.dart';
-import 'package:iqvia_kpi/features/merge_requests/domain/entetties/request_entity.dart';
+import 'package:iqvia_kpi/features/merge_requests/domain/entities/request_entity.dart';
+import 'package:iqvia_kpi/features/onboarding/domain/entities/members_entity.dart';
 
 class MergeRequestDataSourceImplementation implements IMergeRequestDataSource {
   MergeRequestDataSourceImplementation()
@@ -24,5 +25,15 @@ class MergeRequestDataSourceImplementation implements IMergeRequestDataSource {
               (element.state == 'opened' || element.state == 'merged'),
         )
         .toList();
+  }
+
+  @override
+  MembersEntity getSavedMembers() {
+    throw UnimplementedError('Use the local datasource.');
+  }
+
+  @override
+  int getTrackedProjectId() {
+    throw UnimplementedError('Use the local datasource.');
   }
 }

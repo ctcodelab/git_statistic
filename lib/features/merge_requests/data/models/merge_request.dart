@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:iqvia_kpi/features/merge_requests/data/models/author.dart';
-import 'package:iqvia_kpi/features/merge_requests/domain/entetties/merge_request_entity.dart';
+import 'package:iqvia_kpi/features/merge_requests/domain/entities/merge_request_entity.dart';
 
 part 'merge_request.freezed.dart';
 part 'merge_request.g.dart';

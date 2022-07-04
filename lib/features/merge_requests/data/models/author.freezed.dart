@@ -72,9 +72,9 @@ class _$AuthorCopyWithImpl<$Res> implements $AuthorCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$AuthorCopyWith<$Res> implements $AuthorCopyWith<$Res> {
-  factory _$AuthorCopyWith(_Author value, $Res Function(_Author) then) =
-      __$AuthorCopyWithImpl<$Res>;
+abstract class _$$_AuthorCopyWith<$Res> implements $AuthorCopyWith<$Res> {
+  factory _$$_AuthorCopyWith(_$_Author value, $Res Function(_$_Author) then) =
+      __$$_AuthorCopyWithImpl<$Res>;
   @override
   $Res call(
       {String name,
@@ -83,13 +83,13 @@ abstract class _$AuthorCopyWith<$Res> implements $AuthorCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$AuthorCopyWithImpl<$Res> extends _$AuthorCopyWithImpl<$Res>
-    implements _$AuthorCopyWith<$Res> {
-  __$AuthorCopyWithImpl(_Author _value, $Res Function(_Author) _then)
-      : super(_value, (v) => _then(v as _Author));
+class __$$_AuthorCopyWithImpl<$Res> extends _$AuthorCopyWithImpl<$Res>
+    implements _$$_AuthorCopyWith<$Res> {
+  __$$_AuthorCopyWithImpl(_$_Author _value, $Res Function(_$_Author) _then)
+      : super(_value, (v) => _then(v as _$_Author));
 
   @override
-  _Author get _value => super._value as _Author;
+  _$_Author get _value => super._value as _$_Author;
 
   @override
   $Res call({
@@ -97,7 +97,7 @@ class __$AuthorCopyWithImpl<$Res> extends _$AuthorCopyWithImpl<$Res>
     Object? avatarUrl = freezed,
     Object? username = freezed,
   }) {
-    return _then(_Author(
+    return _then(_$_Author(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -142,7 +142,7 @@ class _$_Author implements _Author {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Author &&
+            other is _$_Author &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.avatarUrl, avatarUrl) &&
             const DeepCollectionEquality().equals(other.username, username));
@@ -158,8 +158,8 @@ class _$_Author implements _Author {
 
   @JsonKey(ignore: true)
   @override
-  _$AuthorCopyWith<_Author> get copyWith =>
-      __$AuthorCopyWithImpl<_Author>(this, _$identity);
+  _$$_AuthorCopyWith<_$_Author> get copyWith =>
+      __$$_AuthorCopyWithImpl<_$_Author>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -184,5 +184,6 @@ abstract class _Author implements Author {
   String get username => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$AuthorCopyWith<_Author> get copyWith => throw _privateConstructorUsedError;
+  _$$_AuthorCopyWith<_$_Author> get copyWith =>
+      throw _privateConstructorUsedError;
 }
