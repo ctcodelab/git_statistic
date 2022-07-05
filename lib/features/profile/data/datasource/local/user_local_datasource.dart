@@ -20,6 +20,11 @@ class UserLocalDatasource implements IUserDatasource {
 
   @override
   Future<void> logout() async {
-    await Future.value([hiveService.clear(), securedHiveService.clear()]);
+    await Future.value(
+      [
+        await hiveService.clear(),
+        await securedHiveService.clear(),
+      ],
+    );
   }
 }
