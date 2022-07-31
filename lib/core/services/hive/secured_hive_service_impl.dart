@@ -24,10 +24,14 @@ class SecuredHiveServiceImpl implements HiveService {
     final key = await secureStorage.read(key: 'key');
     encryptionKey = base64Url.decode(key!);
 
-    _securedBox = await Hive.openBox(
-      boxName,
-      encryptionCipher: HiveAesCipher(encryptionKey),
-    );
+    try {
+      _securedBox = await Hive.openBox(
+        boxName,
+        encryptionCipher: HiveAesCipher(encryptionKey),
+      );
+    } catch (_) {
+      await Hive.deleteBoxFromDisk(boxName);
+    }
   }
 
   @override
@@ -44,4 +48,7 @@ class SecuredHiveServiceImpl implements HiveService {
   Future<int> clear() {
     return _securedBox.clear();
   }
+
+  @override
+  Stream<BoxEvent> listenKeyChanges(dynamic key) => _securedBox.watch(key: key);
 }

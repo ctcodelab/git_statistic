@@ -6,7 +6,7 @@ import 'package:iqvia_kpi/features/onboarding/data/models/member.dart';
 import 'package:iqvia_kpi/features/onboarding/data/models/members.dart';
 import 'package:iqvia_kpi/features/onboarding/data/models/project.dart';
 
-class OnboardingRemoteDatasourceImpl implements IOnboardingDatasource {
+class OnboardingRemoteDatasourceImpl implements OnboardingDatasource {
   OnboardingRemoteDatasourceImpl() : gitService = locator<GitLabService>();
 
   final GitService gitService;

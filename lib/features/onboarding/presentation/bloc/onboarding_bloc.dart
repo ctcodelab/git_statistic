@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:iqvia_kpi/core/utils/locator.dart';
@@ -69,6 +71,9 @@ class OnboardingBloc extends Bloc<OnboardingEvent, OnboardingState> {
       },
       membersSelected: (members) {
         setSelectedProjectMembers(members);
+        emit(const OnboardingState.sharedMembers());
+      },
+      complete: () {
         setOnboardingComplete(true);
         emit(const OnboardingState.completed());
       },
@@ -89,6 +94,8 @@ class OnboardingEvent with _$OnboardingEvent {
   const factory OnboardingEvent.membersSelected({
     required MembersEntity members,
   }) = _MembersSelected;
+
+  const factory OnboardingEvent.complete() = _Complete;
 }
 
 @freezed
@@ -108,4 +115,6 @@ class OnboardingState with _$OnboardingState {
   const factory OnboardingState.members({
     required MembersEntity members,
   }) = _Members;
+
+  const factory OnboardingState.sharedMembers() = _SharedMembers;
 }

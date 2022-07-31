@@ -2,9 +2,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:iqvia_kpi/core/utils/locator.dart';
 import 'package:iqvia_kpi/core/utils/usecase.dart';
-import 'package:iqvia_kpi/features/merge_requests/data/models/merge_request.dart';
+import 'package:iqvia_kpi/features/merge_requests/domain/entities/filter_mr_request_entity.dart';
 import 'package:iqvia_kpi/features/merge_requests/domain/entities/merge_request_entity.dart';
 import 'package:iqvia_kpi/features/merge_requests/domain/entities/request_entity.dart';
+import 'package:iqvia_kpi/features/merge_requests/domain/usecases/filter_mr_for_member_usecase.dart';
 import 'package:iqvia_kpi/features/merge_requests/domain/usecases/get_saved_members_usecase.dart';
 import 'package:iqvia_kpi/features/merge_requests/domain/usecases/get_tracked_project_id.dart';
 import 'package:iqvia_kpi/features/merge_requests/domain/usecases/merge_request_usecase.dart';
@@ -17,6 +18,7 @@ class MergeRequestBloc extends Bloc<MergeRequestEvent, MergeRequestState> {
       : mergeRequestUsecase = locator<MergeRequestUsecase>(),
         getSavedMembersUseCase = locator<GetSavedMembersUseCase>(),
         getTrackedProjectIdUseCase = locator<GetTrackedProjectIdUseCase>(),
+        filterMRForMemberUsecase = locator<FilterMRForMemberUsecase>(),
         super(const MergeRequestState()) {
     on(_onEvent);
   }
@@ -24,6 +26,7 @@ class MergeRequestBloc extends Bloc<MergeRequestEvent, MergeRequestState> {
   final MergeRequestUsecase mergeRequestUsecase;
   final GetSavedMembersUseCase getSavedMembersUseCase;
   final GetTrackedProjectIdUseCase getTrackedProjectIdUseCase;
+  final FilterMRForMemberUsecase filterMRForMemberUsecase;
 
   Future<void> _onEvent(
     MergeRequestEvent event,
@@ -44,17 +47,17 @@ class MergeRequestBloc extends Bloc<MergeRequestEvent, MergeRequestState> {
 
         final devs = <String, List<MergeRequestEntity>>{};
         for (final member in members.members) {
-          devs[member.name] = mergeRequests
-              .where(
-                (element) =>
-                    (element as MergeRequest)
-                        .author
-                        .username
-                        .toLowerCase()
-                        .compareTo(member.username.toLowerCase()) ==
-                    0,
-              )
-              .toList();
+          final mrs = filterMRForMemberUsecase(
+            FilterMrRequestEntity(member: member, mrs: mergeRequests),
+          );
+
+          mrs.forEach((key, value) {
+            if (devs.containsKey(key)) {
+              devs[key]!.addAll(value);
+            } else {
+              devs[key] = value;
+            }
+          });
         }
 
         emit(MergeRequestState.loaded(mergeRequests: devs));

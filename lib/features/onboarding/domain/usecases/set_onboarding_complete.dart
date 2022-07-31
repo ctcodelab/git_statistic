@@ -6,7 +6,7 @@ import 'package:iqvia_kpi/features/onboarding/domain/repository/onboarding_repos
 class SetOnboardingComplete implements UseCase<void, bool> {
   SetOnboardingComplete() : repository = locator<OnboardingRepositoryImpl>();
 
-  final IOnboardingRepository repository;
+  final OnboardingRepository repository;
 
   @override
   void call(bool params) {

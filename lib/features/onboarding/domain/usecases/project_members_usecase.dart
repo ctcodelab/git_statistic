@@ -7,7 +7,7 @@ import 'package:iqvia_kpi/features/onboarding/domain/repository/onboarding_repos
 class ProjectMembersUsecase extends UseCase<Future<Members>, int> {
   ProjectMembersUsecase() : repository = locator<OnboardingRepositoryImpl>();
 
-  final IOnboardingRepository repository;
+  final OnboardingRepository repository;
 
   @override
   Future<Members> call(int params) {

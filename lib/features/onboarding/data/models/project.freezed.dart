@@ -25,6 +25,8 @@ mixin _$Project {
   String get nameWithNamespace => throw _privateConstructorUsedError;
   @JsonKey(name: 'avatar_url')
   String? get avatarUrl => throw _privateConstructorUsedError;
+  @JsonKey(name: 'last_activity_at')
+  DateTime get lastActivityAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -38,7 +40,8 @@ abstract class $ProjectCopyWith<$Res> {
   $Res call(
       {int id,
       @JsonKey(name: 'name_with_namespace') String nameWithNamespace,
-      @JsonKey(name: 'avatar_url') String? avatarUrl});
+      @JsonKey(name: 'avatar_url') String? avatarUrl,
+      @JsonKey(name: 'last_activity_at') DateTime lastActivityAt});
 }
 
 /// @nodoc
@@ -54,6 +57,7 @@ class _$ProjectCopyWithImpl<$Res> implements $ProjectCopyWith<$Res> {
     Object? id = freezed,
     Object? nameWithNamespace = freezed,
     Object? avatarUrl = freezed,
+    Object? lastActivityAt = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -68,6 +72,10 @@ class _$ProjectCopyWithImpl<$Res> implements $ProjectCopyWith<$Res> {
           ? _value.avatarUrl
           : avatarUrl // ignore: cast_nullable_to_non_nullable
               as String?,
+      lastActivityAt: lastActivityAt == freezed
+          ? _value.lastActivityAt
+          : lastActivityAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -81,7 +89,8 @@ abstract class _$$_ProjectCopyWith<$Res> implements $ProjectCopyWith<$Res> {
   $Res call(
       {int id,
       @JsonKey(name: 'name_with_namespace') String nameWithNamespace,
-      @JsonKey(name: 'avatar_url') String? avatarUrl});
+      @JsonKey(name: 'avatar_url') String? avatarUrl,
+      @JsonKey(name: 'last_activity_at') DateTime lastActivityAt});
 }
 
 /// @nodoc
@@ -98,6 +107,7 @@ class __$$_ProjectCopyWithImpl<$Res> extends _$ProjectCopyWithImpl<$Res>
     Object? id = freezed,
     Object? nameWithNamespace = freezed,
     Object? avatarUrl = freezed,
+    Object? lastActivityAt = freezed,
   }) {
     return _then(_$_Project(
       id: id == freezed
@@ -112,6 +122,10 @@ class __$$_ProjectCopyWithImpl<$Res> extends _$ProjectCopyWithImpl<$Res>
           ? _value.avatarUrl
           : avatarUrl // ignore: cast_nullable_to_non_nullable
               as String?,
+      lastActivityAt: lastActivityAt == freezed
+          ? _value.lastActivityAt
+          : lastActivityAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -122,7 +136,8 @@ class _$_Project implements _Project {
   const _$_Project(
       {required this.id,
       @JsonKey(name: 'name_with_namespace') required this.nameWithNamespace,
-      @JsonKey(name: 'avatar_url') required this.avatarUrl});
+      @JsonKey(name: 'avatar_url') required this.avatarUrl,
+      @JsonKey(name: 'last_activity_at') required this.lastActivityAt});
 
   factory _$_Project.fromJson(Map<String, dynamic> json) =>
       _$$_ProjectFromJson(json);
@@ -135,10 +150,13 @@ class _$_Project implements _Project {
   @override
   @JsonKey(name: 'avatar_url')
   final String? avatarUrl;
+  @override
+  @JsonKey(name: 'last_activity_at')
+  final DateTime lastActivityAt;
 
   @override
   String toString() {
-    return 'Project(id: $id, nameWithNamespace: $nameWithNamespace, avatarUrl: $avatarUrl)';
+    return 'Project(id: $id, nameWithNamespace: $nameWithNamespace, avatarUrl: $avatarUrl, lastActivityAt: $lastActivityAt)';
   }
 
   @override
@@ -149,7 +167,9 @@ class _$_Project implements _Project {
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.nameWithNamespace, nameWithNamespace) &&
-            const DeepCollectionEquality().equals(other.avatarUrl, avatarUrl));
+            const DeepCollectionEquality().equals(other.avatarUrl, avatarUrl) &&
+            const DeepCollectionEquality()
+                .equals(other.lastActivityAt, lastActivityAt));
   }
 
   @JsonKey(ignore: true)
@@ -158,7 +178,8 @@ class _$_Project implements _Project {
       runtimeType,
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(nameWithNamespace),
-      const DeepCollectionEquality().hash(avatarUrl));
+      const DeepCollectionEquality().hash(avatarUrl),
+      const DeepCollectionEquality().hash(lastActivityAt));
 
   @JsonKey(ignore: true)
   @override
@@ -177,7 +198,9 @@ abstract class _Project implements Project {
       @JsonKey(name: 'name_with_namespace')
           required final String nameWithNamespace,
       @JsonKey(name: 'avatar_url')
-          required final String? avatarUrl}) = _$_Project;
+          required final String? avatarUrl,
+      @JsonKey(name: 'last_activity_at')
+          required final DateTime lastActivityAt}) = _$_Project;
 
   factory _Project.fromJson(Map<String, dynamic> json) = _$_Project.fromJson;
 
@@ -189,6 +212,9 @@ abstract class _Project implements Project {
   @override
   @JsonKey(name: 'avatar_url')
   String? get avatarUrl => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'last_activity_at')
+  DateTime get lastActivityAt => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_ProjectCopyWith<_$_Project> get copyWith =>

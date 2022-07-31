@@ -9,10 +9,11 @@ class MembershipProjectsUsecase
   MembershipProjectsUsecase()
       : repository = locator<OnboardingRepositoryImpl>();
 
-  final IOnboardingRepository repository;
+  final OnboardingRepository repository;
 
   @override
-  Future<List<ProjectEntity>> call(NoParams _) {
-    return repository.membershipProjects();
+  Future<List<ProjectEntity>> call(NoParams _) async {
+    return await repository.membershipProjects()
+      ..sort((a, b) => b.lastActivityAt.compareTo(a.lastActivityAt));
   }
 }

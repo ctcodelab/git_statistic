@@ -6,7 +6,7 @@ import 'package:iqvia_kpi/features/onboarding/data/models/members.dart';
 import 'package:iqvia_kpi/features/onboarding/data/models/project.dart';
 import 'package:iqvia_kpi/features/onboarding/domain/entities/members_entity.dart';
 
-class OnboardingLocalDatasourceImpl implements IOnboardingDatasource {
+class OnboardingLocalDatasourceImpl implements OnboardingDatasource {
   OnboardingLocalDatasourceImpl() : hiveService = locator<HiveServiceImpl>();
 
   final HiveService hiveService;

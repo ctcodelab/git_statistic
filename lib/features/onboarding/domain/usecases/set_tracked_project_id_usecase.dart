@@ -7,7 +7,7 @@ class SetTrackedProjectIdUseCase implements UseCase<void, int?> {
   SetTrackedProjectIdUseCase()
       : repository = locator<OnboardingRepositoryImpl>();
 
-  final IOnboardingRepository repository;
+  final OnboardingRepository repository;
 
   @override
   void call(int? params) {

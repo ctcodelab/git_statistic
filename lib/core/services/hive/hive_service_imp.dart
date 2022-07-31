@@ -2,6 +2,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:iqvia_kpi/core/services/hive/hive_service.dart';
 import 'package:iqvia_kpi/features/onboarding/domain/entities/member_entity.dart';
 import 'package:iqvia_kpi/features/onboarding/domain/entities/members_entity.dart';
+import 'package:iqvia_kpi/features/share_account/domain/entities/shared_member_entity.dart';
 
 class HiveServiceImpl implements HiveService {
   late final Box _box;
@@ -16,8 +17,13 @@ class HiveServiceImpl implements HiveService {
 
     Hive.registerAdapter(MemberEntityAdapter());
     Hive.registerAdapter(MembersEntityAdapter());
+    Hive.registerAdapter(SharedMemberEntityAdapter());
 
-    _box = await Hive.openBox(boxName);
+    try {
+      _box = await Hive.openBox(boxName);
+    } catch (_) {
+      await Hive.deleteBoxFromDisk(boxName);
+    }
   }
 
   @override
@@ -34,4 +40,7 @@ class HiveServiceImpl implements HiveService {
   Future<int> clear() {
     return _box.clear();
   }
+
+  @override
+  Stream<BoxEvent> listenKeyChanges(dynamic key) => _box.watch(key: key);
 }

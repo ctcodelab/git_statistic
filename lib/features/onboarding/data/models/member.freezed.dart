@@ -21,11 +21,22 @@ Member _$MemberFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Member {
   int get id => throw _privateConstructorUsedError;
+  set id(int value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'avatar_url')
   String? get avatarUrl => throw _privateConstructorUsedError;
+  @JsonKey(name: 'avatar_url')
+  set avatarUrl(String? value) => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
+  set name(String value) => throw _privateConstructorUsedError;
   String get state => throw _privateConstructorUsedError;
+  set state(String value) => throw _privateConstructorUsedError;
   String get username => throw _privateConstructorUsedError;
+  set username(String value) => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  List<SharedMemberEntity> get sharedWith => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  set sharedWith(List<SharedMemberEntity> value) =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -41,7 +52,8 @@ abstract class $MemberCopyWith<$Res> {
       @JsonKey(name: 'avatar_url') String? avatarUrl,
       String name,
       String state,
-      String username});
+      String username,
+      @JsonKey(ignore: true) List<SharedMemberEntity> sharedWith});
 }
 
 /// @nodoc
@@ -59,6 +71,7 @@ class _$MemberCopyWithImpl<$Res> implements $MemberCopyWith<$Res> {
     Object? name = freezed,
     Object? state = freezed,
     Object? username = freezed,
+    Object? sharedWith = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -81,6 +94,10 @@ class _$MemberCopyWithImpl<$Res> implements $MemberCopyWith<$Res> {
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String,
+      sharedWith: sharedWith == freezed
+          ? _value.sharedWith
+          : sharedWith // ignore: cast_nullable_to_non_nullable
+              as List<SharedMemberEntity>,
     ));
   }
 }
@@ -95,7 +112,8 @@ abstract class _$$_MemberCopyWith<$Res> implements $MemberCopyWith<$Res> {
       @JsonKey(name: 'avatar_url') String? avatarUrl,
       String name,
       String state,
-      String username});
+      String username,
+      @JsonKey(ignore: true) List<SharedMemberEntity> sharedWith});
 }
 
 /// @nodoc
@@ -114,6 +132,7 @@ class __$$_MemberCopyWithImpl<$Res> extends _$MemberCopyWithImpl<$Res>
     Object? name = freezed,
     Object? state = freezed,
     Object? username = freezed,
+    Object? sharedWith = freezed,
   }) {
     return _then(_$_Member(
       id: id == freezed
@@ -136,6 +155,10 @@ class __$$_MemberCopyWithImpl<$Res> extends _$MemberCopyWithImpl<$Res>
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String,
+      sharedWith: sharedWith == freezed
+          ? _value.sharedWith
+          : sharedWith // ignore: cast_nullable_to_non_nullable
+              as List<SharedMemberEntity>,
     ));
   }
 }
@@ -143,54 +166,36 @@ class __$$_MemberCopyWithImpl<$Res> extends _$MemberCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Member implements _Member {
-  const _$_Member(
+  _$_Member(
       {required this.id,
       @JsonKey(name: 'avatar_url') required this.avatarUrl,
       required this.name,
       required this.state,
-      required this.username});
+      required this.username,
+      @JsonKey(ignore: true) this.sharedWith = const []});
 
   factory _$_Member.fromJson(Map<String, dynamic> json) =>
       _$$_MemberFromJson(json);
 
   @override
-  final int id;
+  int id;
   @override
   @JsonKey(name: 'avatar_url')
-  final String? avatarUrl;
+  String? avatarUrl;
   @override
-  final String name;
+  String name;
   @override
-  final String state;
+  String state;
   @override
-  final String username;
+  String username;
+  @override
+  @JsonKey(ignore: true)
+  List<SharedMemberEntity> sharedWith;
 
   @override
   String toString() {
-    return 'Member(id: $id, avatarUrl: $avatarUrl, name: $name, state: $state, username: $username)';
+    return 'Member(id: $id, avatarUrl: $avatarUrl, name: $name, state: $state, username: $username, sharedWith: $sharedWith)';
   }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_Member &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.avatarUrl, avatarUrl) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.state, state) &&
-            const DeepCollectionEquality().equals(other.username, username));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(avatarUrl),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(state),
-      const DeepCollectionEquality().hash(username));
 
   @JsonKey(ignore: true)
   @override
@@ -204,12 +209,13 @@ class _$_Member implements _Member {
 }
 
 abstract class _Member implements Member {
-  const factory _Member(
-      {required final int id,
-      @JsonKey(name: 'avatar_url') required final String? avatarUrl,
-      required final String name,
-      required final String state,
-      required final String username}) = _$_Member;
+  factory _Member(
+      {required int id,
+      @JsonKey(name: 'avatar_url') required String? avatarUrl,
+      required String name,
+      required String state,
+      required String username,
+      @JsonKey(ignore: true) List<SharedMemberEntity> sharedWith}) = _$_Member;
 
   factory _Member.fromJson(Map<String, dynamic> json) = _$_Member.fromJson;
 
@@ -224,6 +230,9 @@ abstract class _Member implements Member {
   String get state => throw _privateConstructorUsedError;
   @override
   String get username => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  List<SharedMemberEntity> get sharedWith => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_MemberCopyWith<_$_Member> get copyWith =>

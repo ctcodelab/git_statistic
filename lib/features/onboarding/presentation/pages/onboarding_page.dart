@@ -6,6 +6,7 @@ import 'package:iqvia_kpi/features/onboarding/presentation/shimmers/choose_the_p
 import 'package:iqvia_kpi/features/onboarding/presentation/shimmers/chose_members_shimmer.dart';
 import 'package:iqvia_kpi/features/onboarding/presentation/widgets/choose_members_widget.dart';
 import 'package:iqvia_kpi/features/onboarding/presentation/widgets/choose_the_project_widget.dart';
+import 'package:iqvia_kpi/features/share_account/presentation/pages/share_account_page.dart';
 
 class OnboardingPage extends StatelessWidget {
   const OnboardingPage({Key? key}) : super(key: key);
@@ -14,8 +15,7 @@ class OnboardingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       child: BlocProvider<OnboardingBloc>(
-        create: (_) =>
-            OnboardingBloc()..add(const OnboardingEvent.checkConditions()),
+        create: (_) => OnboardingBloc()..add(const OnboardingEvent.checkConditions()),
         child: BlocConsumer<OnboardingBloc, OnboardingState>(
           listenWhen: (_, state) => state.maybeWhen(
             () => false,
@@ -26,8 +26,7 @@ class OnboardingPage extends StatelessWidget {
             state.maybeWhen(
               () => null,
               orElse: () => null,
-              completed: () => Navigator.of(context)
-                  .pushReplacementNamed(RoutePath.homeScreen),
+              completed: () => Navigator.of(context).pushReplacementNamed(RoutePath.homeScreen),
             );
           },
           buildWhen: (_, state) => state.maybeWhen(
@@ -42,6 +41,11 @@ class OnboardingPage extends StatelessWidget {
             ),
             members: (members) => ChooseMembersWidget(
               members: members,
+            ),
+            sharedMembers: () => ShareAccountPage(
+              onComplete: () => BlocProvider.of<OnboardingBloc>(context).add(
+                const OnboardingEvent.complete(),
+              ),
             ),
             completed: () => const SizedBox.shrink(),
             membersLoading: () => const ChooseMembersShimmer(),

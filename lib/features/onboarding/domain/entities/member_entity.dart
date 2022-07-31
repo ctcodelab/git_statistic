@@ -1,5 +1,6 @@
 import 'package:hive/hive.dart';
 import 'package:iqvia_kpi/core/constants/constants.dart';
+import 'package:iqvia_kpi/features/share_account/domain/entities/shared_member_entity.dart';
 
 part 'member_entity.g.dart';
 
@@ -11,6 +12,7 @@ class MemberEntity {
     required this.name,
     required this.state,
     required this.username,
+    required this.sharedWith,
   });
 
   @HiveField(0)
@@ -23,4 +25,6 @@ class MemberEntity {
   final String state;
   @HiveField(4)
   final String username;
+  @HiveField(5)
+  final List<SharedMemberEntity> sharedWith;
 }

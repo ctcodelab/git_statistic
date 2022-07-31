@@ -24,8 +24,9 @@ dependencies:
   hive_flutter: ^1.1.0
   flutter_secure_storage: ^5.0.2
   get_it: ^7.2.0
-  flutter_svg:
+  flutter_svg: ^1.1.1+1
   popover: ^0.2.6+3
+  expandable: ^5.0.1
 
 dev_dependencies:
   flutter_test:

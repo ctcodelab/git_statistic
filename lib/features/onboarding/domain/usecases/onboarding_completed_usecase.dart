@@ -7,7 +7,7 @@ class OnboardingCompletedUsecase implements UseCase<bool, NoParams> {
   OnboardingCompletedUsecase()
       : repository = locator<OnboardingRepositoryImpl>();
 
-  final IOnboardingRepository repository;
+  final OnboardingRepository repository;
 
   @override
   bool call(NoParams _) {

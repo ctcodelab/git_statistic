@@ -55,8 +55,7 @@ class _HomePageState extends State<HomePage> {
             children: [
               Container(
                 margin: const EdgeInsets.only(bottom: 20),
-                padding:
-                    const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
+                padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
                 color: AppColors.blue.withOpacity(0.3),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

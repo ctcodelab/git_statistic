@@ -1,6 +1,6 @@
 import 'package:iqvia_kpi/features/merge_requests/domain/entities/author_entity.dart';
 
-class MergeRequestEntity {
+abstract class MergeRequestEntity {
   const MergeRequestEntity({
     required this.author,
     required this.createdAt,
