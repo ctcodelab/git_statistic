@@ -1,3 +1,5 @@
+import 'package:hive_flutter/hive_flutter.dart';
+
 abstract class HiveService {
   Future init(final String boxName);
 
@@ -6,4 +8,6 @@ abstract class HiveService {
   Future setValue<T>(dynamic key, T value);
 
   Future<int> clear();
+
+  Stream<BoxEvent> listenKeyChanges(dynamic key);
 }

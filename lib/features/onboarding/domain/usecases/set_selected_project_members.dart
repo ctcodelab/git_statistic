@@ -8,7 +8,7 @@ class SetSelectedProjectMembers implements UseCase<void, MembersEntity> {
   SetSelectedProjectMembers()
       : repository = locator<OnboardingRepositoryImpl>();
 
-  final IOnboardingRepository repository;
+  final OnboardingRepository repository;
 
   @override
   void call(MembersEntity params) {

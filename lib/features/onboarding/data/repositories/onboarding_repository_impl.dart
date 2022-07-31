@@ -7,13 +7,13 @@ import 'package:iqvia_kpi/features/onboarding/domain/entities/members_entity.dar
 import 'package:iqvia_kpi/features/onboarding/domain/entities/project_entity.dart';
 import 'package:iqvia_kpi/features/onboarding/domain/repository/onboarding_repository.dart';
 
-class OnboardingRepositoryImpl implements IOnboardingRepository {
+class OnboardingRepositoryImpl implements OnboardingRepository {
   OnboardingRepositoryImpl()
       : localDatasource = locator<OnboardingLocalDatasourceImpl>(),
         remoteDatasource = locator<OnboardingRemoteDatasourceImpl>();
 
-  final IOnboardingDatasource localDatasource;
-  final IOnboardingDatasource remoteDatasource;
+  final OnboardingDatasource localDatasource;
+  final OnboardingDatasource remoteDatasource;
 
   @override
   bool onboardingPassed() {

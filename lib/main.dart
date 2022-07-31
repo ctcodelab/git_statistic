@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iqvia_kpi/core/constants/constants.dart';
 import 'package:iqvia_kpi/core/router/router.dart';
 import 'package:iqvia_kpi/core/services/hive/hive_service_imp.dart';
 import 'package:iqvia_kpi/core/services/hive/secured_hive_service_impl.dart';
@@ -27,9 +28,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       onGenerateRoute: generateRoute,
-      home: MainScreen(),
+      theme: ThemeData(
+        hoverColor: Colors.transparent,
+        splashColor: AppColors.blue.withOpacity(0.1),
+        highlightColor: AppColors.blue.withOpacity(0.1),
+      ),
+      home: const MainScreen(),
     );
   }
 }

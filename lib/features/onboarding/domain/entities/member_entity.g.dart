@@ -22,13 +22,14 @@ class MemberEntityAdapter extends TypeAdapter<MemberEntity> {
       name: fields[2] as String,
       state: fields[3] as String,
       username: fields[4] as String,
+      sharedWith: (fields[5] as List).cast<SharedMemberEntity>(),
     );
   }
 
   @override
   void write(BinaryWriter writer, MemberEntity obj) {
     writer
-      ..writeByte(5)
+      ..writeByte(6)
       ..writeByte(0)
       ..write(obj.id)
       ..writeByte(1)
@@ -38,7 +39,9 @@ class MemberEntityAdapter extends TypeAdapter<MemberEntity> {
       ..writeByte(3)
       ..write(obj.state)
       ..writeByte(4)
-      ..write(obj.username);
+      ..write(obj.username)
+      ..writeByte(5)
+      ..write(obj.sharedWith);
   }
 
   @override

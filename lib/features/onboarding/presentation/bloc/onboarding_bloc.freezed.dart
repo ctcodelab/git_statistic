@@ -22,6 +22,7 @@ mixin _$OnboardingEvent {
     required TResult Function() myProjects,
     required TResult Function(int projectId) projectSelected,
     required TResult Function(MembersEntity members) membersSelected,
+    required TResult Function() complete,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$OnboardingEvent {
     TResult Function()? myProjects,
     TResult Function(int projectId)? projectSelected,
     TResult Function(MembersEntity members)? membersSelected,
+    TResult Function()? complete,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$OnboardingEvent {
     TResult Function()? myProjects,
     TResult Function(int projectId)? projectSelected,
     TResult Function(MembersEntity members)? membersSelected,
+    TResult Function()? complete,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +50,7 @@ mixin _$OnboardingEvent {
     required TResult Function(_MyProjects value) myProjects,
     required TResult Function(_ProjectSelected value) projectSelected,
     required TResult Function(_MembersSelected value) membersSelected,
+    required TResult Function(_Complete value) complete,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +59,7 @@ mixin _$OnboardingEvent {
     TResult Function(_MyProjects value)? myProjects,
     TResult Function(_ProjectSelected value)? projectSelected,
     TResult Function(_MembersSelected value)? membersSelected,
+    TResult Function(_Complete value)? complete,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +68,7 @@ mixin _$OnboardingEvent {
     TResult Function(_MyProjects value)? myProjects,
     TResult Function(_ProjectSelected value)? projectSelected,
     TResult Function(_MembersSelected value)? membersSelected,
+    TResult Function(_Complete value)? complete,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -130,6 +136,7 @@ class _$_CheckConditions implements _CheckConditions {
     required TResult Function() myProjects,
     required TResult Function(int projectId) projectSelected,
     required TResult Function(MembersEntity members) membersSelected,
+    required TResult Function() complete,
   }) {
     return checkConditions();
   }
@@ -141,6 +148,7 @@ class _$_CheckConditions implements _CheckConditions {
     TResult Function()? myProjects,
     TResult Function(int projectId)? projectSelected,
     TResult Function(MembersEntity members)? membersSelected,
+    TResult Function()? complete,
   }) {
     return checkConditions?.call();
   }
@@ -152,6 +160,7 @@ class _$_CheckConditions implements _CheckConditions {
     TResult Function()? myProjects,
     TResult Function(int projectId)? projectSelected,
     TResult Function(MembersEntity members)? membersSelected,
+    TResult Function()? complete,
     required TResult orElse(),
   }) {
     if (checkConditions != null) {
@@ -167,6 +176,7 @@ class _$_CheckConditions implements _CheckConditions {
     required TResult Function(_MyProjects value) myProjects,
     required TResult Function(_ProjectSelected value) projectSelected,
     required TResult Function(_MembersSelected value) membersSelected,
+    required TResult Function(_Complete value) complete,
   }) {
     return checkConditions(this);
   }
@@ -178,6 +188,7 @@ class _$_CheckConditions implements _CheckConditions {
     TResult Function(_MyProjects value)? myProjects,
     TResult Function(_ProjectSelected value)? projectSelected,
     TResult Function(_MembersSelected value)? membersSelected,
+    TResult Function(_Complete value)? complete,
   }) {
     return checkConditions?.call(this);
   }
@@ -189,6 +200,7 @@ class _$_CheckConditions implements _CheckConditions {
     TResult Function(_MyProjects value)? myProjects,
     TResult Function(_ProjectSelected value)? projectSelected,
     TResult Function(_MembersSelected value)? membersSelected,
+    TResult Function(_Complete value)? complete,
     required TResult orElse(),
   }) {
     if (checkConditions != null) {
@@ -247,6 +259,7 @@ class _$_MyProjects implements _MyProjects {
     required TResult Function() myProjects,
     required TResult Function(int projectId) projectSelected,
     required TResult Function(MembersEntity members) membersSelected,
+    required TResult Function() complete,
   }) {
     return myProjects();
   }
@@ -258,6 +271,7 @@ class _$_MyProjects implements _MyProjects {
     TResult Function()? myProjects,
     TResult Function(int projectId)? projectSelected,
     TResult Function(MembersEntity members)? membersSelected,
+    TResult Function()? complete,
   }) {
     return myProjects?.call();
   }
@@ -269,6 +283,7 @@ class _$_MyProjects implements _MyProjects {
     TResult Function()? myProjects,
     TResult Function(int projectId)? projectSelected,
     TResult Function(MembersEntity members)? membersSelected,
+    TResult Function()? complete,
     required TResult orElse(),
   }) {
     if (myProjects != null) {
@@ -284,6 +299,7 @@ class _$_MyProjects implements _MyProjects {
     required TResult Function(_MyProjects value) myProjects,
     required TResult Function(_ProjectSelected value) projectSelected,
     required TResult Function(_MembersSelected value) membersSelected,
+    required TResult Function(_Complete value) complete,
   }) {
     return myProjects(this);
   }
@@ -295,6 +311,7 @@ class _$_MyProjects implements _MyProjects {
     TResult Function(_MyProjects value)? myProjects,
     TResult Function(_ProjectSelected value)? projectSelected,
     TResult Function(_MembersSelected value)? membersSelected,
+    TResult Function(_Complete value)? complete,
   }) {
     return myProjects?.call(this);
   }
@@ -306,6 +323,7 @@ class _$_MyProjects implements _MyProjects {
     TResult Function(_MyProjects value)? myProjects,
     TResult Function(_ProjectSelected value)? projectSelected,
     TResult Function(_MembersSelected value)? membersSelected,
+    TResult Function(_Complete value)? complete,
     required TResult orElse(),
   }) {
     if (myProjects != null) {
@@ -388,6 +406,7 @@ class _$_ProjectSelected implements _ProjectSelected {
     required TResult Function() myProjects,
     required TResult Function(int projectId) projectSelected,
     required TResult Function(MembersEntity members) membersSelected,
+    required TResult Function() complete,
   }) {
     return projectSelected(projectId);
   }
@@ -399,6 +418,7 @@ class _$_ProjectSelected implements _ProjectSelected {
     TResult Function()? myProjects,
     TResult Function(int projectId)? projectSelected,
     TResult Function(MembersEntity members)? membersSelected,
+    TResult Function()? complete,
   }) {
     return projectSelected?.call(projectId);
   }
@@ -410,6 +430,7 @@ class _$_ProjectSelected implements _ProjectSelected {
     TResult Function()? myProjects,
     TResult Function(int projectId)? projectSelected,
     TResult Function(MembersEntity members)? membersSelected,
+    TResult Function()? complete,
     required TResult orElse(),
   }) {
     if (projectSelected != null) {
@@ -425,6 +446,7 @@ class _$_ProjectSelected implements _ProjectSelected {
     required TResult Function(_MyProjects value) myProjects,
     required TResult Function(_ProjectSelected value) projectSelected,
     required TResult Function(_MembersSelected value) membersSelected,
+    required TResult Function(_Complete value) complete,
   }) {
     return projectSelected(this);
   }
@@ -436,6 +458,7 @@ class _$_ProjectSelected implements _ProjectSelected {
     TResult Function(_MyProjects value)? myProjects,
     TResult Function(_ProjectSelected value)? projectSelected,
     TResult Function(_MembersSelected value)? membersSelected,
+    TResult Function(_Complete value)? complete,
   }) {
     return projectSelected?.call(this);
   }
@@ -447,6 +470,7 @@ class _$_ProjectSelected implements _ProjectSelected {
     TResult Function(_MyProjects value)? myProjects,
     TResult Function(_ProjectSelected value)? projectSelected,
     TResult Function(_MembersSelected value)? membersSelected,
+    TResult Function(_Complete value)? complete,
     required TResult orElse(),
   }) {
     if (projectSelected != null) {
@@ -535,6 +559,7 @@ class _$_MembersSelected implements _MembersSelected {
     required TResult Function() myProjects,
     required TResult Function(int projectId) projectSelected,
     required TResult Function(MembersEntity members) membersSelected,
+    required TResult Function() complete,
   }) {
     return membersSelected(members);
   }
@@ -546,6 +571,7 @@ class _$_MembersSelected implements _MembersSelected {
     TResult Function()? myProjects,
     TResult Function(int projectId)? projectSelected,
     TResult Function(MembersEntity members)? membersSelected,
+    TResult Function()? complete,
   }) {
     return membersSelected?.call(members);
   }
@@ -557,6 +583,7 @@ class _$_MembersSelected implements _MembersSelected {
     TResult Function()? myProjects,
     TResult Function(int projectId)? projectSelected,
     TResult Function(MembersEntity members)? membersSelected,
+    TResult Function()? complete,
     required TResult orElse(),
   }) {
     if (membersSelected != null) {
@@ -572,6 +599,7 @@ class _$_MembersSelected implements _MembersSelected {
     required TResult Function(_MyProjects value) myProjects,
     required TResult Function(_ProjectSelected value) projectSelected,
     required TResult Function(_MembersSelected value) membersSelected,
+    required TResult Function(_Complete value) complete,
   }) {
     return membersSelected(this);
   }
@@ -583,6 +611,7 @@ class _$_MembersSelected implements _MembersSelected {
     TResult Function(_MyProjects value)? myProjects,
     TResult Function(_ProjectSelected value)? projectSelected,
     TResult Function(_MembersSelected value)? membersSelected,
+    TResult Function(_Complete value)? complete,
   }) {
     return membersSelected?.call(this);
   }
@@ -594,6 +623,7 @@ class _$_MembersSelected implements _MembersSelected {
     TResult Function(_MyProjects value)? myProjects,
     TResult Function(_ProjectSelected value)? projectSelected,
     TResult Function(_MembersSelected value)? membersSelected,
+    TResult Function(_Complete value)? complete,
     required TResult orElse(),
   }) {
     if (membersSelected != null) {
@@ -614,6 +644,129 @@ abstract class _MembersSelected implements OnboardingEvent {
 }
 
 /// @nodoc
+abstract class _$$_CompleteCopyWith<$Res> {
+  factory _$$_CompleteCopyWith(
+          _$_Complete value, $Res Function(_$_Complete) then) =
+      __$$_CompleteCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_CompleteCopyWithImpl<$Res>
+    extends _$OnboardingEventCopyWithImpl<$Res>
+    implements _$$_CompleteCopyWith<$Res> {
+  __$$_CompleteCopyWithImpl(
+      _$_Complete _value, $Res Function(_$_Complete) _then)
+      : super(_value, (v) => _then(v as _$_Complete));
+
+  @override
+  _$_Complete get _value => super._value as _$_Complete;
+}
+
+/// @nodoc
+
+class _$_Complete implements _Complete {
+  const _$_Complete();
+
+  @override
+  String toString() {
+    return 'OnboardingEvent.complete()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_Complete);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() checkConditions,
+    required TResult Function() myProjects,
+    required TResult Function(int projectId) projectSelected,
+    required TResult Function(MembersEntity members) membersSelected,
+    required TResult Function() complete,
+  }) {
+    return complete();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? checkConditions,
+    TResult Function()? myProjects,
+    TResult Function(int projectId)? projectSelected,
+    TResult Function(MembersEntity members)? membersSelected,
+    TResult Function()? complete,
+  }) {
+    return complete?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? checkConditions,
+    TResult Function()? myProjects,
+    TResult Function(int projectId)? projectSelected,
+    TResult Function(MembersEntity members)? membersSelected,
+    TResult Function()? complete,
+    required TResult orElse(),
+  }) {
+    if (complete != null) {
+      return complete();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_CheckConditions value) checkConditions,
+    required TResult Function(_MyProjects value) myProjects,
+    required TResult Function(_ProjectSelected value) projectSelected,
+    required TResult Function(_MembersSelected value) membersSelected,
+    required TResult Function(_Complete value) complete,
+  }) {
+    return complete(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_CheckConditions value)? checkConditions,
+    TResult Function(_MyProjects value)? myProjects,
+    TResult Function(_ProjectSelected value)? projectSelected,
+    TResult Function(_MembersSelected value)? membersSelected,
+    TResult Function(_Complete value)? complete,
+  }) {
+    return complete?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_CheckConditions value)? checkConditions,
+    TResult Function(_MyProjects value)? myProjects,
+    TResult Function(_ProjectSelected value)? projectSelected,
+    TResult Function(_MembersSelected value)? membersSelected,
+    TResult Function(_Complete value)? complete,
+    required TResult orElse(),
+  }) {
+    if (complete != null) {
+      return complete(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Complete implements OnboardingEvent {
+  const factory _Complete() = _$_Complete;
+}
+
+/// @nodoc
 mixin _$OnboardingState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
@@ -623,6 +776,7 @@ mixin _$OnboardingState {
     required TResult Function() completed,
     required TResult Function() membersLoading,
     required TResult Function(MembersEntity members) members,
+    required TResult Function() sharedMembers,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -633,6 +787,7 @@ mixin _$OnboardingState {
     TResult Function()? completed,
     TResult Function()? membersLoading,
     TResult Function(MembersEntity members)? members,
+    TResult Function()? sharedMembers,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -643,6 +798,7 @@ mixin _$OnboardingState {
     TResult Function()? completed,
     TResult Function()? membersLoading,
     TResult Function(MembersEntity members)? members,
+    TResult Function()? sharedMembers,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -654,6 +810,7 @@ mixin _$OnboardingState {
     required TResult Function(_Completed value) completed,
     required TResult Function(_MembersLoading value) membersLoading,
     required TResult Function(_Members value) members,
+    required TResult Function(_SharedMembers value) sharedMembers,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -664,6 +821,7 @@ mixin _$OnboardingState {
     TResult Function(_Completed value)? completed,
     TResult Function(_MembersLoading value)? membersLoading,
     TResult Function(_Members value)? members,
+    TResult Function(_SharedMembers value)? sharedMembers,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -674,6 +832,7 @@ mixin _$OnboardingState {
     TResult Function(_Completed value)? completed,
     TResult Function(_MembersLoading value)? membersLoading,
     TResult Function(_Members value)? members,
+    TResult Function(_SharedMembers value)? sharedMembers,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -743,6 +902,7 @@ class _$_OnboardingState implements _OnboardingState {
     required TResult Function() completed,
     required TResult Function() membersLoading,
     required TResult Function(MembersEntity members) members,
+    required TResult Function() sharedMembers,
   }) {
     return $default();
   }
@@ -756,6 +916,7 @@ class _$_OnboardingState implements _OnboardingState {
     TResult Function()? completed,
     TResult Function()? membersLoading,
     TResult Function(MembersEntity members)? members,
+    TResult Function()? sharedMembers,
   }) {
     return $default?.call();
   }
@@ -769,6 +930,7 @@ class _$_OnboardingState implements _OnboardingState {
     TResult Function()? completed,
     TResult Function()? membersLoading,
     TResult Function(MembersEntity members)? members,
+    TResult Function()? sharedMembers,
     required TResult orElse(),
   }) {
     if ($default != null) {
@@ -786,6 +948,7 @@ class _$_OnboardingState implements _OnboardingState {
     required TResult Function(_Completed value) completed,
     required TResult Function(_MembersLoading value) membersLoading,
     required TResult Function(_Members value) members,
+    required TResult Function(_SharedMembers value) sharedMembers,
   }) {
     return $default(this);
   }
@@ -799,6 +962,7 @@ class _$_OnboardingState implements _OnboardingState {
     TResult Function(_Completed value)? completed,
     TResult Function(_MembersLoading value)? membersLoading,
     TResult Function(_Members value)? members,
+    TResult Function(_SharedMembers value)? sharedMembers,
   }) {
     return $default?.call(this);
   }
@@ -812,6 +976,7 @@ class _$_OnboardingState implements _OnboardingState {
     TResult Function(_Completed value)? completed,
     TResult Function(_MembersLoading value)? membersLoading,
     TResult Function(_Members value)? members,
+    TResult Function(_SharedMembers value)? sharedMembers,
     required TResult orElse(),
   }) {
     if ($default != null) {
@@ -872,6 +1037,7 @@ class _$_ProjectsLoading implements _ProjectsLoading {
     required TResult Function() completed,
     required TResult Function() membersLoading,
     required TResult Function(MembersEntity members) members,
+    required TResult Function() sharedMembers,
   }) {
     return projectsLoading();
   }
@@ -885,6 +1051,7 @@ class _$_ProjectsLoading implements _ProjectsLoading {
     TResult Function()? completed,
     TResult Function()? membersLoading,
     TResult Function(MembersEntity members)? members,
+    TResult Function()? sharedMembers,
   }) {
     return projectsLoading?.call();
   }
@@ -898,6 +1065,7 @@ class _$_ProjectsLoading implements _ProjectsLoading {
     TResult Function()? completed,
     TResult Function()? membersLoading,
     TResult Function(MembersEntity members)? members,
+    TResult Function()? sharedMembers,
     required TResult orElse(),
   }) {
     if (projectsLoading != null) {
@@ -915,6 +1083,7 @@ class _$_ProjectsLoading implements _ProjectsLoading {
     required TResult Function(_Completed value) completed,
     required TResult Function(_MembersLoading value) membersLoading,
     required TResult Function(_Members value) members,
+    required TResult Function(_SharedMembers value) sharedMembers,
   }) {
     return projectsLoading(this);
   }
@@ -928,6 +1097,7 @@ class _$_ProjectsLoading implements _ProjectsLoading {
     TResult Function(_Completed value)? completed,
     TResult Function(_MembersLoading value)? membersLoading,
     TResult Function(_Members value)? members,
+    TResult Function(_SharedMembers value)? sharedMembers,
   }) {
     return projectsLoading?.call(this);
   }
@@ -941,6 +1111,7 @@ class _$_ProjectsLoading implements _ProjectsLoading {
     TResult Function(_Completed value)? completed,
     TResult Function(_MembersLoading value)? membersLoading,
     TResult Function(_Members value)? members,
+    TResult Function(_SharedMembers value)? sharedMembers,
     required TResult orElse(),
   }) {
     if (projectsLoading != null) {
@@ -1030,6 +1201,7 @@ class _$_YourProjects implements _YourProjects {
     required TResult Function() completed,
     required TResult Function() membersLoading,
     required TResult Function(MembersEntity members) members,
+    required TResult Function() sharedMembers,
   }) {
     return yourProjects(projects);
   }
@@ -1043,6 +1215,7 @@ class _$_YourProjects implements _YourProjects {
     TResult Function()? completed,
     TResult Function()? membersLoading,
     TResult Function(MembersEntity members)? members,
+    TResult Function()? sharedMembers,
   }) {
     return yourProjects?.call(projects);
   }
@@ -1056,6 +1229,7 @@ class _$_YourProjects implements _YourProjects {
     TResult Function()? completed,
     TResult Function()? membersLoading,
     TResult Function(MembersEntity members)? members,
+    TResult Function()? sharedMembers,
     required TResult orElse(),
   }) {
     if (yourProjects != null) {
@@ -1073,6 +1247,7 @@ class _$_YourProjects implements _YourProjects {
     required TResult Function(_Completed value) completed,
     required TResult Function(_MembersLoading value) membersLoading,
     required TResult Function(_Members value) members,
+    required TResult Function(_SharedMembers value) sharedMembers,
   }) {
     return yourProjects(this);
   }
@@ -1086,6 +1261,7 @@ class _$_YourProjects implements _YourProjects {
     TResult Function(_Completed value)? completed,
     TResult Function(_MembersLoading value)? membersLoading,
     TResult Function(_Members value)? members,
+    TResult Function(_SharedMembers value)? sharedMembers,
   }) {
     return yourProjects?.call(this);
   }
@@ -1099,6 +1275,7 @@ class _$_YourProjects implements _YourProjects {
     TResult Function(_Completed value)? completed,
     TResult Function(_MembersLoading value)? membersLoading,
     TResult Function(_Members value)? members,
+    TResult Function(_SharedMembers value)? sharedMembers,
     required TResult orElse(),
   }) {
     if (yourProjects != null) {
@@ -1165,6 +1342,7 @@ class _$_Completed implements _Completed {
     required TResult Function() completed,
     required TResult Function() membersLoading,
     required TResult Function(MembersEntity members) members,
+    required TResult Function() sharedMembers,
   }) {
     return completed();
   }
@@ -1178,6 +1356,7 @@ class _$_Completed implements _Completed {
     TResult Function()? completed,
     TResult Function()? membersLoading,
     TResult Function(MembersEntity members)? members,
+    TResult Function()? sharedMembers,
   }) {
     return completed?.call();
   }
@@ -1191,6 +1370,7 @@ class _$_Completed implements _Completed {
     TResult Function()? completed,
     TResult Function()? membersLoading,
     TResult Function(MembersEntity members)? members,
+    TResult Function()? sharedMembers,
     required TResult orElse(),
   }) {
     if (completed != null) {
@@ -1208,6 +1388,7 @@ class _$_Completed implements _Completed {
     required TResult Function(_Completed value) completed,
     required TResult Function(_MembersLoading value) membersLoading,
     required TResult Function(_Members value) members,
+    required TResult Function(_SharedMembers value) sharedMembers,
   }) {
     return completed(this);
   }
@@ -1221,6 +1402,7 @@ class _$_Completed implements _Completed {
     TResult Function(_Completed value)? completed,
     TResult Function(_MembersLoading value)? membersLoading,
     TResult Function(_Members value)? members,
+    TResult Function(_SharedMembers value)? sharedMembers,
   }) {
     return completed?.call(this);
   }
@@ -1234,6 +1416,7 @@ class _$_Completed implements _Completed {
     TResult Function(_Completed value)? completed,
     TResult Function(_MembersLoading value)? membersLoading,
     TResult Function(_Members value)? members,
+    TResult Function(_SharedMembers value)? sharedMembers,
     required TResult orElse(),
   }) {
     if (completed != null) {
@@ -1294,6 +1477,7 @@ class _$_MembersLoading implements _MembersLoading {
     required TResult Function() completed,
     required TResult Function() membersLoading,
     required TResult Function(MembersEntity members) members,
+    required TResult Function() sharedMembers,
   }) {
     return membersLoading();
   }
@@ -1307,6 +1491,7 @@ class _$_MembersLoading implements _MembersLoading {
     TResult Function()? completed,
     TResult Function()? membersLoading,
     TResult Function(MembersEntity members)? members,
+    TResult Function()? sharedMembers,
   }) {
     return membersLoading?.call();
   }
@@ -1320,6 +1505,7 @@ class _$_MembersLoading implements _MembersLoading {
     TResult Function()? completed,
     TResult Function()? membersLoading,
     TResult Function(MembersEntity members)? members,
+    TResult Function()? sharedMembers,
     required TResult orElse(),
   }) {
     if (membersLoading != null) {
@@ -1337,6 +1523,7 @@ class _$_MembersLoading implements _MembersLoading {
     required TResult Function(_Completed value) completed,
     required TResult Function(_MembersLoading value) membersLoading,
     required TResult Function(_Members value) members,
+    required TResult Function(_SharedMembers value) sharedMembers,
   }) {
     return membersLoading(this);
   }
@@ -1350,6 +1537,7 @@ class _$_MembersLoading implements _MembersLoading {
     TResult Function(_Completed value)? completed,
     TResult Function(_MembersLoading value)? membersLoading,
     TResult Function(_Members value)? members,
+    TResult Function(_SharedMembers value)? sharedMembers,
   }) {
     return membersLoading?.call(this);
   }
@@ -1363,6 +1551,7 @@ class _$_MembersLoading implements _MembersLoading {
     TResult Function(_Completed value)? completed,
     TResult Function(_MembersLoading value)? membersLoading,
     TResult Function(_Members value)? members,
+    TResult Function(_SharedMembers value)? sharedMembers,
     required TResult orElse(),
   }) {
     if (membersLoading != null) {
@@ -1445,6 +1634,7 @@ class _$_Members implements _Members {
     required TResult Function() completed,
     required TResult Function() membersLoading,
     required TResult Function(MembersEntity members) members,
+    required TResult Function() sharedMembers,
   }) {
     return members(this.members);
   }
@@ -1458,6 +1648,7 @@ class _$_Members implements _Members {
     TResult Function()? completed,
     TResult Function()? membersLoading,
     TResult Function(MembersEntity members)? members,
+    TResult Function()? sharedMembers,
   }) {
     return members?.call(this.members);
   }
@@ -1471,6 +1662,7 @@ class _$_Members implements _Members {
     TResult Function()? completed,
     TResult Function()? membersLoading,
     TResult Function(MembersEntity members)? members,
+    TResult Function()? sharedMembers,
     required TResult orElse(),
   }) {
     if (members != null) {
@@ -1488,6 +1680,7 @@ class _$_Members implements _Members {
     required TResult Function(_Completed value) completed,
     required TResult Function(_MembersLoading value) membersLoading,
     required TResult Function(_Members value) members,
+    required TResult Function(_SharedMembers value) sharedMembers,
   }) {
     return members(this);
   }
@@ -1501,6 +1694,7 @@ class _$_Members implements _Members {
     TResult Function(_Completed value)? completed,
     TResult Function(_MembersLoading value)? membersLoading,
     TResult Function(_Members value)? members,
+    TResult Function(_SharedMembers value)? sharedMembers,
   }) {
     return members?.call(this);
   }
@@ -1514,6 +1708,7 @@ class _$_Members implements _Members {
     TResult Function(_Completed value)? completed,
     TResult Function(_MembersLoading value)? membersLoading,
     TResult Function(_Members value)? members,
+    TResult Function(_SharedMembers value)? sharedMembers,
     required TResult orElse(),
   }) {
     if (members != null) {
@@ -1530,4 +1725,139 @@ abstract class _Members implements OnboardingState {
   @JsonKey(ignore: true)
   _$$_MembersCopyWith<_$_Members> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_SharedMembersCopyWith<$Res> {
+  factory _$$_SharedMembersCopyWith(
+          _$_SharedMembers value, $Res Function(_$_SharedMembers) then) =
+      __$$_SharedMembersCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_SharedMembersCopyWithImpl<$Res>
+    extends _$OnboardingStateCopyWithImpl<$Res>
+    implements _$$_SharedMembersCopyWith<$Res> {
+  __$$_SharedMembersCopyWithImpl(
+      _$_SharedMembers _value, $Res Function(_$_SharedMembers) _then)
+      : super(_value, (v) => _then(v as _$_SharedMembers));
+
+  @override
+  _$_SharedMembers get _value => super._value as _$_SharedMembers;
+}
+
+/// @nodoc
+
+class _$_SharedMembers implements _SharedMembers {
+  const _$_SharedMembers();
+
+  @override
+  String toString() {
+    return 'OnboardingState.sharedMembers()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_SharedMembers);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function() $default, {
+    required TResult Function() projectsLoading,
+    required TResult Function(List<ProjectEntity> projects) yourProjects,
+    required TResult Function() completed,
+    required TResult Function() membersLoading,
+    required TResult Function(MembersEntity members) members,
+    required TResult Function() sharedMembers,
+  }) {
+    return sharedMembers();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function()? $default, {
+    TResult Function()? projectsLoading,
+    TResult Function(List<ProjectEntity> projects)? yourProjects,
+    TResult Function()? completed,
+    TResult Function()? membersLoading,
+    TResult Function(MembersEntity members)? members,
+    TResult Function()? sharedMembers,
+  }) {
+    return sharedMembers?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function()? $default, {
+    TResult Function()? projectsLoading,
+    TResult Function(List<ProjectEntity> projects)? yourProjects,
+    TResult Function()? completed,
+    TResult Function()? membersLoading,
+    TResult Function(MembersEntity members)? members,
+    TResult Function()? sharedMembers,
+    required TResult orElse(),
+  }) {
+    if (sharedMembers != null) {
+      return sharedMembers();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_OnboardingState value) $default, {
+    required TResult Function(_ProjectsLoading value) projectsLoading,
+    required TResult Function(_YourProjects value) yourProjects,
+    required TResult Function(_Completed value) completed,
+    required TResult Function(_MembersLoading value) membersLoading,
+    required TResult Function(_Members value) members,
+    required TResult Function(_SharedMembers value) sharedMembers,
+  }) {
+    return sharedMembers(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(_OnboardingState value)? $default, {
+    TResult Function(_ProjectsLoading value)? projectsLoading,
+    TResult Function(_YourProjects value)? yourProjects,
+    TResult Function(_Completed value)? completed,
+    TResult Function(_MembersLoading value)? membersLoading,
+    TResult Function(_Members value)? members,
+    TResult Function(_SharedMembers value)? sharedMembers,
+  }) {
+    return sharedMembers?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_OnboardingState value)? $default, {
+    TResult Function(_ProjectsLoading value)? projectsLoading,
+    TResult Function(_YourProjects value)? yourProjects,
+    TResult Function(_Completed value)? completed,
+    TResult Function(_MembersLoading value)? membersLoading,
+    TResult Function(_Members value)? members,
+    TResult Function(_SharedMembers value)? sharedMembers,
+    required TResult orElse(),
+  }) {
+    if (sharedMembers != null) {
+      return sharedMembers(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SharedMembers implements OnboardingState {
+  const factory _SharedMembers() = _$_SharedMembers;
 }

@@ -7,6 +7,7 @@ import 'package:iqvia_kpi/features/login/domain/usecases/setup_git_service_useca
 import 'package:iqvia_kpi/features/merge_requests/data/datasources/local/merge_request_local_datasource_impl.dart';
 import 'package:iqvia_kpi/features/merge_requests/data/datasources/remote/merge_request_implementation.dart';
 import 'package:iqvia_kpi/features/merge_requests/data/repositories/merge_request_repository_implementation.dart';
+import 'package:iqvia_kpi/features/merge_requests/domain/usecases/filter_mr_for_member_usecase.dart';
 import 'package:iqvia_kpi/features/merge_requests/domain/usecases/get_saved_members_usecase.dart';
 import 'package:iqvia_kpi/features/merge_requests/domain/usecases/get_tracked_project_id.dart';
 import 'package:iqvia_kpi/features/merge_requests/domain/usecases/merge_request_usecase.dart';
@@ -24,6 +25,7 @@ import 'package:iqvia_kpi/features/profile/data/datasource/remote/user_remote_da
 import 'package:iqvia_kpi/features/profile/data/repository/user_repository_impl.dart';
 import 'package:iqvia_kpi/features/profile/domain/usecase/get_user_usecase.dart';
 import 'package:iqvia_kpi/features/profile/domain/usecase/logout_usecase.dart';
+import 'package:iqvia_kpi/features/share_account/domain/usecases/update_shared_members_usecase.dart';
 
 final locator = GetIt.instance;
 
@@ -34,6 +36,7 @@ void setUpLocator() {
   locator.registerFactory(() => MergeRequestUsecase());
   locator.registerFactory(() => GetSavedMembersUseCase());
   locator.registerFactory(() => GetTrackedProjectIdUseCase());
+  locator.registerFactory(() => FilterMRForMemberUsecase());
 
   locator.registerFactory(() => LoginDataSourceImpl());
   locator.registerFactory(() => LoginRepositoryImpl());
@@ -50,6 +53,7 @@ void setUpLocator() {
   locator.registerFactory(() => ProjectMembersUsecase());
   locator.registerFactory(() => SetSelectedProjectMembers());
   locator.registerFactory(() => SetOnboardingComplete());
+  locator.registerFactory(() => UpdateSharedMembersUsecase());
 
   locator.registerFactory(() => UserRemoteDataSource());
   locator.registerFactory(() => UserLocalDatasource());

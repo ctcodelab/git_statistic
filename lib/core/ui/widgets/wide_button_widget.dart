@@ -8,6 +8,7 @@ class WideButtonWidget extends StatelessWidget {
     this.margin,
     this.decoration,
     this.showInProgress = false,
+    this.size,
     Key? key,
   }) : super(key: key);
 
@@ -16,6 +17,7 @@ class WideButtonWidget extends StatelessWidget {
   final Text text;
   final EdgeInsets? margin;
   final bool showInProgress;
+  final Size? size;
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +29,8 @@ class WideButtonWidget extends StatelessWidget {
         padding: const EdgeInsets.all(8),
         alignment: Alignment.center,
         decoration: decoration,
+        width: size?.width ?? MediaQuery.of(context).size.width / 1.5,
+        height: size?.height ?? 50,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
