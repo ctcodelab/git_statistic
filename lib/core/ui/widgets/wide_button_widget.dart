@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:iqvia_kpi/core/constants/constants.dart';
+import 'package:git_statistic/core/constants/constants.dart';
 
 class WideButtonWidget extends StatelessWidget {
   const WideButtonWidget({

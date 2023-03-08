@@ -1,6 +1,6 @@
 import 'package:hive/hive.dart';
-import 'package:iqvia_kpi/core/constants/constants.dart';
-import 'package:iqvia_kpi/features/share_account/domain/entities/shared_member_entity.dart';
+import 'package:git_statistic/core/constants/constants.dart';
+import 'package:git_statistic/features/share_account/domain/entities/shared_member_entity.dart';
 
 part 'member_entity.g.dart';
 

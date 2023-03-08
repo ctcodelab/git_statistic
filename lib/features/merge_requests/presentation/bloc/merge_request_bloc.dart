@@ -1,15 +1,15 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:iqvia_kpi/core/utils/locator.dart';
-import 'package:iqvia_kpi/core/utils/usecase.dart';
-import 'package:iqvia_kpi/features/merge_requests/domain/entities/filter_mr_request_entity.dart';
-import 'package:iqvia_kpi/features/merge_requests/domain/entities/merge_request_entity.dart';
-import 'package:iqvia_kpi/features/merge_requests/domain/entities/request_entity.dart';
-import 'package:iqvia_kpi/features/merge_requests/domain/usecases/filter_mr_for_member_usecase.dart';
-import 'package:iqvia_kpi/features/merge_requests/domain/usecases/get_saved_members_usecase.dart';
-import 'package:iqvia_kpi/features/merge_requests/domain/usecases/get_tracked_project_id.dart';
-import 'package:iqvia_kpi/features/merge_requests/domain/usecases/merge_request_usecase.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/entities/members_entity.dart';
+import 'package:git_statistic/core/utils/locator.dart';
+import 'package:git_statistic/core/utils/usecase.dart';
+import 'package:git_statistic/features/merge_requests/domain/entities/filter_mr_request_entity.dart';
+import 'package:git_statistic/features/merge_requests/domain/entities/merge_request_entity.dart';
+import 'package:git_statistic/features/merge_requests/domain/entities/request_entity.dart';
+import 'package:git_statistic/features/merge_requests/domain/usecases/filter_mr_for_member_usecase.dart';
+import 'package:git_statistic/features/merge_requests/domain/usecases/get_saved_members_usecase.dart';
+import 'package:git_statistic/features/merge_requests/domain/usecases/get_tracked_project_id.dart';
+import 'package:git_statistic/features/merge_requests/domain/usecases/merge_request_usecase.dart';
+import 'package:git_statistic/features/onboarding/domain/entities/members_entity.dart';
 
 part 'merge_request_bloc.freezed.dart';
 

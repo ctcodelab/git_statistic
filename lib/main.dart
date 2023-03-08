@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:iqvia_kpi/core/constants/constants.dart';
-import 'package:iqvia_kpi/core/router/router.dart';
-import 'package:iqvia_kpi/core/services/hive/hive_service_imp.dart';
-import 'package:iqvia_kpi/core/services/hive/secured_hive_service_impl.dart';
-import 'package:iqvia_kpi/core/ui/widgets/restart_widget.dart';
-import 'package:iqvia_kpi/core/utils/locator.dart';
-import 'package:iqvia_kpi/main_screen.dart';
+import 'package:git_statistic/core/constants/constants.dart';
+import 'package:git_statistic/core/router/router.dart';
+import 'package:git_statistic/core/services/hive/hive_service_imp.dart';
+import 'package:git_statistic/core/services/hive/secured_hive_service_impl.dart';
+import 'package:git_statistic/core/ui/widgets/restart_widget.dart';
+import 'package:git_statistic/core/utils/locator.dart';
+import 'package:git_statistic/main_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

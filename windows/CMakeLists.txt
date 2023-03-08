@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(iqvia_kpi LANGUAGES CXX)
+project(git_statistic LANGUAGES CXX)
 
-set(BINARY_NAME "iqvia_kpi")
+set(BINARY_NAME "git_statistic")
 
 cmake_policy(SET CMP0063 NEW)
 

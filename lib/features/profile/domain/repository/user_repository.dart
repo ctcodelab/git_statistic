@@ -1,4 +1,4 @@
-import 'package:iqvia_kpi/features/profile/domain/enteties/user_entity.dart';
+import 'package:git_statistic/features/profile/domain/enteties/user_entity.dart';
 
 abstract class IUserRepository {
   Future<UserEntity> getUser();

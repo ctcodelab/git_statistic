@@ -1,4 +1,4 @@
-package com.example.iqvia_kpi
+package com.example.git_statistic
 
 import io.flutter.embedding.android.FlutterActivity
 

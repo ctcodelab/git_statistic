@@ -1,6 +1,6 @@
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
-import 'package:iqvia_kpi/core/constants/constants.dart';
+import 'package:git_statistic/core/constants/constants.dart';
 
 class AddNewMemberWidget extends StatefulWidget {
   const AddNewMemberWidget({
@@ -58,9 +58,7 @@ class _AddNewMemberWidgetState extends State<AddNewMemberWidget> {
                   ),
                   Flexible(
                     child: InkWell(
-                      onTap: textController.text.isNotEmpty
-                          ? () => _onSubmitted(textController.text)
-                          : null,
+                      onTap: textController.text.isNotEmpty ? () => _onSubmitted(textController.text) : null,
                       child: Container(
                         decoration: (textController.text.isNotEmpty
                                 ? Style.activeButtonDecoration

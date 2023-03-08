@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:iqvia_kpi/features/merge_requests/data/models/author.dart';
-import 'package:iqvia_kpi/features/merge_requests/domain/entities/merge_request_entity.dart';
+import 'package:git_statistic/features/merge_requests/data/models/author.dart';
+import 'package:git_statistic/features/merge_requests/domain/entities/merge_request_entity.dart';
 
 part 'merge_request.freezed.dart';
 part 'merge_request.g.dart';
@@ -16,6 +16,5 @@ class MergeRequest with _$MergeRequest implements MergeRequestEntity {
     required String description,
   }) = _MergeRequest;
 
-  factory MergeRequest.fromJson(Map<String, dynamic> json) =>
-      _$MergeRequestFromJson(json);
+  factory MergeRequest.fromJson(Map<String, dynamic> json) => _$MergeRequestFromJson(json);
 }

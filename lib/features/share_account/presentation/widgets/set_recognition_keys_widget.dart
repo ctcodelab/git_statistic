@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:iqvia_kpi/core/constants/constants.dart';
-import 'package:iqvia_kpi/core/ui/header_info_widget.dart';
-import 'package:iqvia_kpi/core/ui/widgets/wide_button_widget.dart';
-import 'package:iqvia_kpi/features/share_account/domain/entities/shared_member_entity.dart';
-import 'package:iqvia_kpi/features/share_account/presentation/bloc/share_account_bloc.dart';
+import 'package:git_statistic/core/constants/constants.dart';
+import 'package:git_statistic/core/ui/header_info_widget.dart';
+import 'package:git_statistic/core/ui/widgets/wide_button_widget.dart';
+import 'package:git_statistic/features/share_account/domain/entities/shared_member_entity.dart';
+import 'package:git_statistic/features/share_account/presentation/bloc/share_account_bloc.dart';
 
 class SetRecognitionKeysWidget extends StatefulWidget {
   const SetRecognitionKeysWidget({required this.members, Key? key}) : super(key: key);
 
-  final List<SharedMemberEntity> members;
+  final Set<SharedMemberEntity> members;
 
   @override
   State<StatefulWidget> createState() => _SetRecognitionKeysWidgetState();
@@ -54,24 +54,24 @@ class _SetRecognitionKeysWidgetState extends State<SetRecognitionKeysWidget> {
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 10),
                       child: Text(
-                        widget.members[index].name,
+                        widget.members.elementAt(index).name,
                         style: const TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ),
                     TextField(
-                      controller: textControllers[widget.members[index]],
+                      controller: textControllers[widget.members.elementAt(index)],
                       style: const TextStyle(fontSize: 14),
                       decoration: const InputDecoration(
                         hintText: 'Enter the recognition key',
                       ),
                       onSubmitted: (text) => _onSubmitted(
                         text,
-                        widget.members[index],
+                        widget.members.elementAt(index),
                         context,
                       ),
                       onChanged: (text) => _onSubmitted(
                         text,
-                        widget.members[index],
+                        widget.members.elementAt(index),
                         context,
                       ),
                     ),
@@ -96,8 +96,7 @@ class _SetRecognitionKeysWidgetState extends State<SetRecognitionKeysWidget> {
                     const ShareAccountEvent.complete(),
                   )
               : null,
-          decoration:
-              doneConditionsMeet ? Style.activeButtonDecoration : Style.inactiveButtonDecoration,
+          decoration: doneConditionsMeet ? Style.activeButtonDecoration : Style.inactiveButtonDecoration,
           showInProgress: false,
         ),
       ),

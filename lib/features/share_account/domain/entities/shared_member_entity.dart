@@ -1,9 +1,11 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:iqvia_kpi/core/constants/constants.dart';
+import 'package:git_statistic/core/constants/constants.dart';
 
 part 'shared_member_entity.g.dart';
 
 @HiveType(typeId: HiveId.sharedMemberId)
+@freezed
 class SharedMemberEntity {
   SharedMemberEntity({
     required this.name,

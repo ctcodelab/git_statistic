@@ -1462,7 +1462,7 @@ mixin _$ShareAccountState {
     required TResult Function(String accountName, int accountId)
         addShareToAccount,
     required TResult Function(MembersEntity members) members,
-    required TResult Function(List<SharedMemberEntity> members)
+    required TResult Function(Set<SharedMemberEntity> members)
         setRecognitionKeys,
   }) =>
       throw _privateConstructorUsedError;
@@ -1472,7 +1472,7 @@ mixin _$ShareAccountState {
     TResult Function(MembersEntity members)? accountOverview,
     TResult Function(String accountName, int accountId)? addShareToAccount,
     TResult Function(MembersEntity members)? members,
-    TResult Function(List<SharedMemberEntity> members)? setRecognitionKeys,
+    TResult Function(Set<SharedMemberEntity> members)? setRecognitionKeys,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1481,7 +1481,7 @@ mixin _$ShareAccountState {
     TResult Function(MembersEntity members)? accountOverview,
     TResult Function(String accountName, int accountId)? addShareToAccount,
     TResult Function(MembersEntity members)? members,
-    TResult Function(List<SharedMemberEntity> members)? setRecognitionKeys,
+    TResult Function(Set<SharedMemberEntity> members)? setRecognitionKeys,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1569,7 +1569,7 @@ class _$_ShareAccountState implements _ShareAccountState {
     required TResult Function(String accountName, int accountId)
         addShareToAccount,
     required TResult Function(MembersEntity members) members,
-    required TResult Function(List<SharedMemberEntity> members)
+    required TResult Function(Set<SharedMemberEntity> members)
         setRecognitionKeys,
   }) {
     return $default();
@@ -1582,7 +1582,7 @@ class _$_ShareAccountState implements _ShareAccountState {
     TResult Function(MembersEntity members)? accountOverview,
     TResult Function(String accountName, int accountId)? addShareToAccount,
     TResult Function(MembersEntity members)? members,
-    TResult Function(List<SharedMemberEntity> members)? setRecognitionKeys,
+    TResult Function(Set<SharedMemberEntity> members)? setRecognitionKeys,
   }) {
     return $default?.call();
   }
@@ -1594,7 +1594,7 @@ class _$_ShareAccountState implements _ShareAccountState {
     TResult Function(MembersEntity members)? accountOverview,
     TResult Function(String accountName, int accountId)? addShareToAccount,
     TResult Function(MembersEntity members)? members,
-    TResult Function(List<SharedMemberEntity> members)? setRecognitionKeys,
+    TResult Function(Set<SharedMemberEntity> members)? setRecognitionKeys,
     required TResult orElse(),
   }) {
     if ($default != null) {
@@ -1706,7 +1706,7 @@ class _$_AccountsOverview implements _AccountsOverview {
     required TResult Function(String accountName, int accountId)
         addShareToAccount,
     required TResult Function(MembersEntity members) members,
-    required TResult Function(List<SharedMemberEntity> members)
+    required TResult Function(Set<SharedMemberEntity> members)
         setRecognitionKeys,
   }) {
     return accountOverview(this.members);
@@ -1719,7 +1719,7 @@ class _$_AccountsOverview implements _AccountsOverview {
     TResult Function(MembersEntity members)? accountOverview,
     TResult Function(String accountName, int accountId)? addShareToAccount,
     TResult Function(MembersEntity members)? members,
-    TResult Function(List<SharedMemberEntity> members)? setRecognitionKeys,
+    TResult Function(Set<SharedMemberEntity> members)? setRecognitionKeys,
   }) {
     return accountOverview?.call(this.members);
   }
@@ -1731,7 +1731,7 @@ class _$_AccountsOverview implements _AccountsOverview {
     TResult Function(MembersEntity members)? accountOverview,
     TResult Function(String accountName, int accountId)? addShareToAccount,
     TResult Function(MembersEntity members)? members,
-    TResult Function(List<SharedMemberEntity> members)? setRecognitionKeys,
+    TResult Function(Set<SharedMemberEntity> members)? setRecognitionKeys,
     required TResult orElse(),
   }) {
     if (accountOverview != null) {
@@ -1858,7 +1858,7 @@ class _$_AddShareToAccount implements _AddShareToAccount {
     required TResult Function(String accountName, int accountId)
         addShareToAccount,
     required TResult Function(MembersEntity members) members,
-    required TResult Function(List<SharedMemberEntity> members)
+    required TResult Function(Set<SharedMemberEntity> members)
         setRecognitionKeys,
   }) {
     return addShareToAccount(accountName, accountId);
@@ -1871,7 +1871,7 @@ class _$_AddShareToAccount implements _AddShareToAccount {
     TResult Function(MembersEntity members)? accountOverview,
     TResult Function(String accountName, int accountId)? addShareToAccount,
     TResult Function(MembersEntity members)? members,
-    TResult Function(List<SharedMemberEntity> members)? setRecognitionKeys,
+    TResult Function(Set<SharedMemberEntity> members)? setRecognitionKeys,
   }) {
     return addShareToAccount?.call(accountName, accountId);
   }
@@ -1883,7 +1883,7 @@ class _$_AddShareToAccount implements _AddShareToAccount {
     TResult Function(MembersEntity members)? accountOverview,
     TResult Function(String accountName, int accountId)? addShareToAccount,
     TResult Function(MembersEntity members)? members,
-    TResult Function(List<SharedMemberEntity> members)? setRecognitionKeys,
+    TResult Function(Set<SharedMemberEntity> members)? setRecognitionKeys,
     required TResult orElse(),
   }) {
     if (addShareToAccount != null) {
@@ -2002,7 +2002,7 @@ class _$_Members implements _Members {
     required TResult Function(String accountName, int accountId)
         addShareToAccount,
     required TResult Function(MembersEntity members) members,
-    required TResult Function(List<SharedMemberEntity> members)
+    required TResult Function(Set<SharedMemberEntity> members)
         setRecognitionKeys,
   }) {
     return members(this.members);
@@ -2015,7 +2015,7 @@ class _$_Members implements _Members {
     TResult Function(MembersEntity members)? accountOverview,
     TResult Function(String accountName, int accountId)? addShareToAccount,
     TResult Function(MembersEntity members)? members,
-    TResult Function(List<SharedMemberEntity> members)? setRecognitionKeys,
+    TResult Function(Set<SharedMemberEntity> members)? setRecognitionKeys,
   }) {
     return members?.call(this.members);
   }
@@ -2027,7 +2027,7 @@ class _$_Members implements _Members {
     TResult Function(MembersEntity members)? accountOverview,
     TResult Function(String accountName, int accountId)? addShareToAccount,
     TResult Function(MembersEntity members)? members,
-    TResult Function(List<SharedMemberEntity> members)? setRecognitionKeys,
+    TResult Function(Set<SharedMemberEntity> members)? setRecognitionKeys,
     required TResult orElse(),
   }) {
     if (members != null) {
@@ -2091,7 +2091,7 @@ abstract class _$$_SetRecognitionKeysCopyWith<$Res> {
   factory _$$_SetRecognitionKeysCopyWith(_$_SetRecognitionKeys value,
           $Res Function(_$_SetRecognitionKeys) then) =
       __$$_SetRecognitionKeysCopyWithImpl<$Res>;
-  $Res call({List<SharedMemberEntity> members});
+  $Res call({Set<SharedMemberEntity> members});
 }
 
 /// @nodoc
@@ -2113,7 +2113,7 @@ class __$$_SetRecognitionKeysCopyWithImpl<$Res>
       members == freezed
           ? _value._members
           : members // ignore: cast_nullable_to_non_nullable
-              as List<SharedMemberEntity>,
+              as Set<SharedMemberEntity>,
     ));
   }
 }
@@ -2121,14 +2121,14 @@ class __$$_SetRecognitionKeysCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_SetRecognitionKeys implements _SetRecognitionKeys {
-  const _$_SetRecognitionKeys(final List<SharedMemberEntity> members)
+  const _$_SetRecognitionKeys(final Set<SharedMemberEntity> members)
       : _members = members;
 
-  final List<SharedMemberEntity> _members;
+  final Set<SharedMemberEntity> _members;
   @override
-  List<SharedMemberEntity> get members {
+  Set<SharedMemberEntity> get members {
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_members);
+    return EqualUnmodifiableSetView(_members);
   }
 
   @override
@@ -2150,7 +2150,7 @@ class _$_SetRecognitionKeys implements _SetRecognitionKeys {
     required TResult Function(String accountName, int accountId)
         addShareToAccount,
     required TResult Function(MembersEntity members) members,
-    required TResult Function(List<SharedMemberEntity> members)
+    required TResult Function(Set<SharedMemberEntity> members)
         setRecognitionKeys,
   }) {
     return setRecognitionKeys(this.members);
@@ -2163,7 +2163,7 @@ class _$_SetRecognitionKeys implements _SetRecognitionKeys {
     TResult Function(MembersEntity members)? accountOverview,
     TResult Function(String accountName, int accountId)? addShareToAccount,
     TResult Function(MembersEntity members)? members,
-    TResult Function(List<SharedMemberEntity> members)? setRecognitionKeys,
+    TResult Function(Set<SharedMemberEntity> members)? setRecognitionKeys,
   }) {
     return setRecognitionKeys?.call(this.members);
   }
@@ -2175,7 +2175,7 @@ class _$_SetRecognitionKeys implements _SetRecognitionKeys {
     TResult Function(MembersEntity members)? accountOverview,
     TResult Function(String accountName, int accountId)? addShareToAccount,
     TResult Function(MembersEntity members)? members,
-    TResult Function(List<SharedMemberEntity> members)? setRecognitionKeys,
+    TResult Function(Set<SharedMemberEntity> members)? setRecognitionKeys,
     required TResult orElse(),
   }) {
     if (setRecognitionKeys != null) {
@@ -2226,10 +2226,10 @@ class _$_SetRecognitionKeys implements _SetRecognitionKeys {
 }
 
 abstract class _SetRecognitionKeys implements ShareAccountState {
-  const factory _SetRecognitionKeys(final List<SharedMemberEntity> members) =
+  const factory _SetRecognitionKeys(final Set<SharedMemberEntity> members) =
       _$_SetRecognitionKeys;
 
-  List<SharedMemberEntity> get members => throw _privateConstructorUsedError;
+  Set<SharedMemberEntity> get members => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$$_SetRecognitionKeysCopyWith<_$_SetRecognitionKeys> get copyWith =>
       throw _privateConstructorUsedError;

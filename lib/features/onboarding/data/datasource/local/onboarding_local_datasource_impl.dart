@@ -1,10 +1,10 @@
-import 'package:iqvia_kpi/core/services/hive/hive_service.dart';
-import 'package:iqvia_kpi/core/services/hive/hive_service_imp.dart';
-import 'package:iqvia_kpi/core/utils/locator.dart';
-import 'package:iqvia_kpi/features/onboarding/data/datasource/onboarding_datasource.dart';
-import 'package:iqvia_kpi/features/onboarding/data/models/members.dart';
-import 'package:iqvia_kpi/features/onboarding/data/models/project.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/entities/members_entity.dart';
+import 'package:git_statistic/core/services/hive/hive_service.dart';
+import 'package:git_statistic/core/services/hive/hive_service_imp.dart';
+import 'package:git_statistic/core/utils/locator.dart';
+import 'package:git_statistic/features/onboarding/data/datasource/onboarding_datasource.dart';
+import 'package:git_statistic/features/onboarding/data/models/members.dart';
+import 'package:git_statistic/features/onboarding/data/models/project.dart';
+import 'package:git_statistic/features/onboarding/domain/entities/members_entity.dart';
 
 class OnboardingLocalDatasourceImpl implements OnboardingDatasource {
   OnboardingLocalDatasourceImpl() : hiveService = locator<HiveServiceImpl>();

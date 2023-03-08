@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:iqvia_kpi/core/constants/constants.dart';
-import 'package:iqvia_kpi/features/profile/presentation/bloc/user_bloc.dart';
+import 'package:git_statistic/core/constants/constants.dart';
+import 'package:git_statistic/features/profile/presentation/bloc/user_bloc.dart';
 
 part 'setting_item.dart';
 

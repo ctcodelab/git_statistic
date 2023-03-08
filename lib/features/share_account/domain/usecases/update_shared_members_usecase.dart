@@ -1,8 +1,8 @@
-import 'package:iqvia_kpi/core/utils/usecase.dart';
-import 'package:iqvia_kpi/features/onboarding/data/models/member.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/entities/members_entity.dart';
-import 'package:iqvia_kpi/features/share_account/domain/entities/shared_member_entity.dart';
-import 'package:iqvia_kpi/features/share_account/domain/entities/shared_members_request_entity.dart';
+import 'package:git_statistic/core/utils/usecase.dart';
+import 'package:git_statistic/features/onboarding/data/models/member.dart';
+import 'package:git_statistic/features/onboarding/domain/entities/members_entity.dart';
+import 'package:git_statistic/features/share_account/domain/entities/shared_member_entity.dart';
+import 'package:git_statistic/features/share_account/domain/entities/shared_members_request_entity.dart';
 
 class UpdateSharedMembersUsecase extends UseCase<MembersEntity, SharedMembersRequestEntity> {
   @override

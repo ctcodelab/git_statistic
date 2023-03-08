@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:iqvia_kpi/core/constants/constants.dart';
-import 'package:iqvia_kpi/core/ui/header_info_widget.dart';
-import 'package:iqvia_kpi/core/ui/widgets/wide_button_widget.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/entities/project_entity.dart';
-import 'package:iqvia_kpi/features/onboarding/presentation/bloc/onboarding_bloc.dart';
+import 'package:git_statistic/core/constants/constants.dart';
+import 'package:git_statistic/core/ui/header_info_widget.dart';
+import 'package:git_statistic/core/ui/widgets/wide_button_widget.dart';
+import 'package:git_statistic/features/onboarding/domain/entities/project_entity.dart';
+import 'package:git_statistic/features/onboarding/presentation/bloc/onboarding_bloc.dart';
 
 class ChooseTheProjectWidget extends StatefulWidget {
   const ChooseTheProjectWidget({
@@ -43,9 +43,7 @@ class _ChooseTheProjectWidgetState extends State<ChooseTheProjectWidget> {
                 itemBuilder: (_, index) => InkWell(
                   hoverColor: Colors.transparent,
                   onTap: () => setState(() {
-                    widget.projects[index].id != projectId
-                        ? projectId = widget.projects[index].id
-                        : projectId = null;
+                    widget.projects[index].id != projectId ? projectId = widget.projects[index].id : projectId = null;
                     checkButtonConditions();
                   }),
                   child: Container(
@@ -53,14 +51,10 @@ class _ChooseTheProjectWidgetState extends State<ChooseTheProjectWidget> {
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       border: Border.all(
-                        color: widget.projects[index].id != projectId
-                            ? AppColors.text600
-                            : AppColors.blue,
+                        color: widget.projects[index].id != projectId ? AppColors.text600 : AppColors.blue,
                       ),
                       borderRadius: BorderRadius.circular(5),
-                      color: widget.projects[index].id != projectId
-                          ? AppColors.white
-                          : AppColors.blue.withOpacity(0.1),
+                      color: widget.projects[index].id != projectId ? AppColors.white : AppColors.blue.withOpacity(0.1),
                     ),
                     child: Row(
                       children: [

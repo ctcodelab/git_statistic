@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:iqvia_kpi/features/onboarding/data/models/member.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/entities/members_entity.dart';
+import 'package:git_statistic/features/onboarding/data/models/member.dart';
+import 'package:git_statistic/features/onboarding/domain/entities/members_entity.dart';
 
 part 'members.freezed.dart';
 

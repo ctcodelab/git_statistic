@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:iqvia_kpi/core/constants/constants.dart';
-import 'package:iqvia_kpi/core/ui/widgets/text_field_widget.dart';
-import 'package:iqvia_kpi/core/ui/widgets/wide_button_widget.dart';
-import 'package:iqvia_kpi/features/login/presentation/bloc/login_bloc.dart';
+import 'package:git_statistic/core/constants/constants.dart';
+import 'package:git_statistic/core/ui/widgets/text_field_widget.dart';
+import 'package:git_statistic/core/ui/widgets/wide_button_widget.dart';
+import 'package:git_statistic/features/login/presentation/bloc/login_bloc.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -47,11 +47,9 @@ class _LoginPageState extends State<LoginPage> {
                           });
                         },
                         suffixIcon: InkWell(
-                          onTap: () =>
-                              setState(() => obscureText = !obscureText),
-                          child: obscureText
-                              ? SvgPicture.asset(AssetsPath.kEyeOff)
-                              : SvgPicture.asset(AssetsPath.kEyeOn),
+                          onTap: () => setState(() => obscureText = !obscureText),
+                          child:
+                              obscureText ? SvgPicture.asset(AssetsPath.kEyeOff) : SvgPicture.asset(AssetsPath.kEyeOn),
                         ),
                       ),
                     ),

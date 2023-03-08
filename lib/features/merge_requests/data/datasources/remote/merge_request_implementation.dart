@@ -1,14 +1,13 @@
-import 'package:iqvia_kpi/core/services/git/git_service.dart';
-import 'package:iqvia_kpi/core/services/git/gitlab_service.dart';
-import 'package:iqvia_kpi/core/utils/locator.dart';
-import 'package:iqvia_kpi/features/merge_requests/data/datasources/merge_requests_datasource.dart';
-import 'package:iqvia_kpi/features/merge_requests/data/models/merge_request.dart';
-import 'package:iqvia_kpi/features/merge_requests/domain/entities/request_entity.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/entities/members_entity.dart';
+import 'package:git_statistic/core/services/git/git_service.dart';
+import 'package:git_statistic/core/services/git/gitlab_service.dart';
+import 'package:git_statistic/core/utils/locator.dart';
+import 'package:git_statistic/features/merge_requests/data/datasources/merge_requests_datasource.dart';
+import 'package:git_statistic/features/merge_requests/data/models/merge_request.dart';
+import 'package:git_statistic/features/merge_requests/domain/entities/request_entity.dart';
+import 'package:git_statistic/features/onboarding/domain/entities/members_entity.dart';
 
 class MergeRequestDataSourceImplementation implements IMergeRequestDataSource {
-  MergeRequestDataSourceImplementation()
-      : gitService = locator<GitLabService>();
+  MergeRequestDataSourceImplementation() : gitService = locator<GitLabService>();
 
   final GitService gitService;
 

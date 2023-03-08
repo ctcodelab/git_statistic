@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:iqvia_kpi/core/constants/constants.dart';
-import 'package:iqvia_kpi/core/ui/header_info_widget.dart';
-import 'package:iqvia_kpi/core/ui/widgets/wide_button_widget.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/entities/member_entity.dart';
-import 'package:iqvia_kpi/features/onboarding/presentation/widgets/member_widget.dart';
-import 'package:iqvia_kpi/features/share_account/presentation/bloc/share_account_bloc.dart';
-import 'package:iqvia_kpi/features/share_account/presentation/widgets/add_new_member_widget.dart';
+import 'package:git_statistic/core/constants/constants.dart';
+import 'package:git_statistic/core/ui/header_info_widget.dart';
+import 'package:git_statistic/core/ui/widgets/wide_button_widget.dart';
+import 'package:git_statistic/features/onboarding/domain/entities/member_entity.dart';
+import 'package:git_statistic/features/onboarding/presentation/widgets/member_widget.dart';
+import 'package:git_statistic/features/share_account/presentation/bloc/share_account_bloc.dart';
+import 'package:git_statistic/features/share_account/presentation/widgets/add_new_member_widget.dart';
 
 class AssignMembersOnAccountWidget extends StatefulWidget {
   const AssignMembersOnAccountWidget({

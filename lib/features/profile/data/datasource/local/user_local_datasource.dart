@@ -1,9 +1,9 @@
-import 'package:iqvia_kpi/core/services/hive/hive_service.dart';
-import 'package:iqvia_kpi/core/services/hive/hive_service_imp.dart';
-import 'package:iqvia_kpi/core/services/hive/secured_hive_service_impl.dart';
-import 'package:iqvia_kpi/core/utils/locator.dart';
-import 'package:iqvia_kpi/features/profile/data/datasource/user_datasource.dart';
-import 'package:iqvia_kpi/features/profile/data/models/user.dart';
+import 'package:git_statistic/core/services/hive/hive_service.dart';
+import 'package:git_statistic/core/services/hive/hive_service_imp.dart';
+import 'package:git_statistic/core/services/hive/secured_hive_service_impl.dart';
+import 'package:git_statistic/core/utils/locator.dart';
+import 'package:git_statistic/features/profile/data/datasource/user_datasource.dart';
+import 'package:git_statistic/features/profile/data/models/user.dart';
 
 class UserLocalDatasource implements IUserDatasource {
   UserLocalDatasource()

@@ -1,7 +1,7 @@
-import 'package:iqvia_kpi/core/services/hive/hive_service.dart';
-import 'package:iqvia_kpi/core/services/hive/secured_hive_service_impl.dart';
-import 'package:iqvia_kpi/core/utils/locator.dart';
-import 'package:iqvia_kpi/features/login/data/datasource/login_datasource.dart';
+import 'package:git_statistic/core/services/hive/hive_service.dart';
+import 'package:git_statistic/core/services/hive/secured_hive_service_impl.dart';
+import 'package:git_statistic/core/utils/locator.dart';
+import 'package:git_statistic/features/login/data/datasource/login_datasource.dart';
 
 class LoginDataSourceImpl implements ILoginDataSource {
   LoginDataSourceImpl() : hiveService = locator<SecuredHiveServiceImpl>();

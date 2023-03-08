@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:iqvia_kpi/core/constants/constants.dart';
-import 'package:iqvia_kpi/features/onboarding/presentation/bloc/onboarding_bloc.dart';
-import 'package:iqvia_kpi/features/onboarding/presentation/shimmers/choose_the_project_shimmer.dart';
-import 'package:iqvia_kpi/features/onboarding/presentation/shimmers/chose_members_shimmer.dart';
-import 'package:iqvia_kpi/features/onboarding/presentation/widgets/choose_members_widget.dart';
-import 'package:iqvia_kpi/features/onboarding/presentation/widgets/choose_the_project_widget.dart';
-import 'package:iqvia_kpi/features/share_account/presentation/pages/share_account_page.dart';
+import 'package:git_statistic/core/constants/constants.dart';
+import 'package:git_statistic/features/onboarding/presentation/bloc/onboarding_bloc.dart';
+import 'package:git_statistic/features/onboarding/presentation/shimmers/choose_the_project_shimmer.dart';
+import 'package:git_statistic/features/onboarding/presentation/shimmers/chose_members_shimmer.dart';
+import 'package:git_statistic/features/onboarding/presentation/widgets/choose_members_widget.dart';
+import 'package:git_statistic/features/onboarding/presentation/widgets/choose_the_project_widget.dart';
+import 'package:git_statistic/features/share_account/presentation/pages/share_account_page.dart';
 
 class OnboardingPage extends StatelessWidget {
   const OnboardingPage({Key? key}) : super(key: key);

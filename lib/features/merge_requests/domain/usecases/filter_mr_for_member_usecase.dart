@@ -1,9 +1,8 @@
-import 'package:iqvia_kpi/core/utils/usecase.dart';
-import 'package:iqvia_kpi/features/merge_requests/domain/entities/filter_mr_request_entity.dart';
-import 'package:iqvia_kpi/features/merge_requests/domain/entities/merge_request_entity.dart';
+import 'package:git_statistic/core/utils/usecase.dart';
+import 'package:git_statistic/features/merge_requests/domain/entities/filter_mr_request_entity.dart';
+import 'package:git_statistic/features/merge_requests/domain/entities/merge_request_entity.dart';
 
-class FilterMRForMemberUsecase
-    implements UseCase<Map<String, List<MergeRequestEntity>>, FilterMrRequestEntity> {
+class FilterMRForMemberUsecase implements UseCase<Map<String, List<MergeRequestEntity>>, FilterMrRequestEntity> {
   @override
   Map<String, List<MergeRequestEntity>> call(FilterMrRequestEntity params) {
     /// Firstly initiate our containers with an empty MRs list
@@ -16,16 +15,14 @@ class FilterMRForMemberUsecase
 
     /// Then check if we have shared members for this account
     /// In case yes we creating a recognition keys list
-    final recognitionKeys =
-        sharedMembers.isEmpty ? null : sharedMembers.keys.map((e) => e.toLowerCase()).toList();
+    final recognitionKeys = sharedMembers.isEmpty ? null : sharedMembers.keys.map((e) => e.toLowerCase()).toList();
     for (final mr in params.mrs) {
       bool containsRecognitionKey = false;
 
       /// Do we have recognition keys?
       if (recognitionKeys != null) {
         /// If do we check if this exactly MR have at least one of our recognition key
-        containsRecognitionKey =
-            recognitionKeys.where((e) => mr.description.toLowerCase().contains(e)).isNotEmpty;
+        containsRecognitionKey = recognitionKeys.where((e) => mr.description.toLowerCase().contains(e)).isNotEmpty;
       }
 
       /// If this MR doesn't have any recognition key

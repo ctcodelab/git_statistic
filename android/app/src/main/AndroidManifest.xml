@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.iqvia_kpi">
+    package="com.example.git_statistic">
    <application
-        android:label="iqvia_kpi"
+        android:label="git_statistic"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

@@ -1,8 +1,8 @@
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:iqvia_kpi/core/services/hive/hive_service.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/entities/member_entity.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/entities/members_entity.dart';
-import 'package:iqvia_kpi/features/share_account/domain/entities/shared_member_entity.dart';
+import 'package:git_statistic/core/services/hive/hive_service.dart';
+import 'package:git_statistic/features/onboarding/domain/entities/member_entity.dart';
+import 'package:git_statistic/features/onboarding/domain/entities/members_entity.dart';
+import 'package:git_statistic/features/share_account/domain/entities/shared_member_entity.dart';
 
 class HiveServiceImpl implements HiveService {
   late final Box _box;

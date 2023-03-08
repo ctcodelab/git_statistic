@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:iqvia_kpi/features/merge_requests/domain/entities/merge_request_entity.dart';
+import 'package:git_statistic/features/merge_requests/domain/entities/merge_request_entity.dart';
 
 class RowWidget extends StatelessWidget {
   const RowWidget({
