@@ -13,9 +13,9 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
-  gitlab:
+  flutter_gitlab:
     git:
-      url: git@github.com:beshkarev/gitlab-dart.git
+      url: git@github.com:ctcodelab/flutter_gitlab.git
   freezed_annotation: ^2.0.1
   flutter_bloc: ^8.0.1
   json_annotation: ^4.5.0
@@ -25,7 +25,7 @@ dependencies:
   flutter_secure_storage: ^5.0.2
   get_it: ^7.2.0
   flutter_svg: ^1.1.1+1
-  popover: ^0.2.6+3
+  popover: 0.2.6+3
   expandable: ^5.0.1
 
 dev_dependencies:
