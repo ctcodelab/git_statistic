@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:iqvia_kpi/features/share_account/presentation/bloc/share_account_bloc.dart';
-import 'package:iqvia_kpi/features/share_account/presentation/widgets/assign_members_on_account.dart';
-import 'package:iqvia_kpi/features/share_account/presentation/widgets/set_recognition_keys_widget.dart';
-import 'package:iqvia_kpi/features/share_account/presentation/widgets/share_account_overview_widget.dart';
+import 'package:git_statistic/features/share_account/presentation/bloc/share_account_bloc.dart';
+import 'package:git_statistic/features/share_account/presentation/widgets/assign_members_on_account.dart';
+import 'package:git_statistic/features/share_account/presentation/widgets/set_recognition_keys_widget.dart';
+import 'package:git_statistic/features/share_account/presentation/widgets/share_account_overview_widget.dart';
 
 class ShareAccountPage extends StatelessWidget {
   const ShareAccountPage({required this.onComplete, Key? key}) : super(key: key);

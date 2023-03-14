@@ -21,22 +21,13 @@ Member _$MemberFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Member {
   int get id => throw _privateConstructorUsedError;
-  set id(int value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'avatar_url')
   String? get avatarUrl => throw _privateConstructorUsedError;
-  @JsonKey(name: 'avatar_url')
-  set avatarUrl(String? value) => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  set name(String value) => throw _privateConstructorUsedError;
   String get state => throw _privateConstructorUsedError;
-  set state(String value) => throw _privateConstructorUsedError;
   String get username => throw _privateConstructorUsedError;
-  set username(String value) => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   List<SharedMemberEntity> get sharedWith => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  set sharedWith(List<SharedMemberEntity> value) =>
-      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -156,7 +147,7 @@ class __$$_MemberCopyWithImpl<$Res> extends _$MemberCopyWithImpl<$Res>
           : username // ignore: cast_nullable_to_non_nullable
               as String,
       sharedWith: sharedWith == freezed
-          ? _value.sharedWith
+          ? _value._sharedWith
           : sharedWith // ignore: cast_nullable_to_non_nullable
               as List<SharedMemberEntity>,
     ));
@@ -168,34 +159,66 @@ class __$$_MemberCopyWithImpl<$Res> extends _$MemberCopyWithImpl<$Res>
 class _$_Member implements _Member {
   _$_Member(
       {required this.id,
-      @JsonKey(name: 'avatar_url') required this.avatarUrl,
+      @JsonKey(name: 'avatar_url')
+          required this.avatarUrl,
       required this.name,
       required this.state,
       required this.username,
-      @JsonKey(ignore: true) this.sharedWith = const []});
+      @JsonKey(ignore: true)
+          final List<SharedMemberEntity> sharedWith = const []})
+      : _sharedWith = sharedWith;
 
   factory _$_Member.fromJson(Map<String, dynamic> json) =>
       _$$_MemberFromJson(json);
 
   @override
-  int id;
+  final int id;
   @override
   @JsonKey(name: 'avatar_url')
-  String? avatarUrl;
+  final String? avatarUrl;
   @override
-  String name;
+  final String name;
   @override
-  String state;
+  final String state;
   @override
-  String username;
+  final String username;
+  final List<SharedMemberEntity> _sharedWith;
   @override
   @JsonKey(ignore: true)
-  List<SharedMemberEntity> sharedWith;
+  List<SharedMemberEntity> get sharedWith {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_sharedWith);
+  }
 
   @override
   String toString() {
     return 'Member(id: $id, avatarUrl: $avatarUrl, name: $name, state: $state, username: $username, sharedWith: $sharedWith)';
   }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_Member &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.avatarUrl, avatarUrl) &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.state, state) &&
+            const DeepCollectionEquality().equals(other.username, username) &&
+            const DeepCollectionEquality()
+                .equals(other._sharedWith, _sharedWith));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(avatarUrl),
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(state),
+      const DeepCollectionEquality().hash(username),
+      const DeepCollectionEquality().hash(_sharedWith));
 
   @JsonKey(ignore: true)
   @override
@@ -210,12 +233,13 @@ class _$_Member implements _Member {
 
 abstract class _Member implements Member {
   factory _Member(
-      {required int id,
-      @JsonKey(name: 'avatar_url') required String? avatarUrl,
-      required String name,
-      required String state,
-      required String username,
-      @JsonKey(ignore: true) List<SharedMemberEntity> sharedWith}) = _$_Member;
+          {required final int id,
+          @JsonKey(name: 'avatar_url') required final String? avatarUrl,
+          required final String name,
+          required final String state,
+          required final String username,
+          @JsonKey(ignore: true) final List<SharedMemberEntity> sharedWith}) =
+      _$_Member;
 
   factory _Member.fromJson(Map<String, dynamic> json) = _$_Member.fromJson;
 

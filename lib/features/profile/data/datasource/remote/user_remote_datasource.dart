@@ -1,8 +1,8 @@
-import 'package:iqvia_kpi/core/services/git/git_service.dart';
-import 'package:iqvia_kpi/core/services/git/gitlab_service.dart';
-import 'package:iqvia_kpi/core/utils/locator.dart';
-import 'package:iqvia_kpi/features/profile/data/datasource/user_datasource.dart';
-import 'package:iqvia_kpi/features/profile/data/models/user.dart';
+import 'package:git_statistic/core/services/git/git_service.dart';
+import 'package:git_statistic/core/services/git/gitlab_service.dart';
+import 'package:git_statistic/core/utils/locator.dart';
+import 'package:git_statistic/features/profile/data/datasource/user_datasource.dart';
+import 'package:git_statistic/features/profile/data/models/user.dart';
 
 class UserRemoteDataSource implements IUserDatasource {
   UserRemoteDataSource() : gitService = locator<GitLabService>();

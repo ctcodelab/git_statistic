@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:iqvia_kpi/features/merge_requests/presentation/bloc/merge_request_bloc.dart';
-import 'package:iqvia_kpi/features/merge_requests/presentation/shimmers/merge_request_shimmer.dart';
-import 'package:iqvia_kpi/features/merge_requests/presentation/widgets/row_widget.dart';
-import 'package:iqvia_kpi/features/merge_requests/presentation/widgets/table_header_widget.dart';
+import 'package:git_statistic/features/merge_requests/presentation/bloc/merge_request_bloc.dart';
+import 'package:git_statistic/features/merge_requests/presentation/shimmers/merge_request_shimmer.dart';
+import 'package:git_statistic/features/merge_requests/presentation/widgets/row_widget.dart';
+import 'package:git_statistic/features/merge_requests/presentation/widgets/table_header_widget.dart';
 
 class MergeRequestWidget extends StatelessWidget {
   const MergeRequestWidget({

@@ -1,4 +1,4 @@
-import 'package:iqvia_kpi/features/profile/data/models/user.dart';
+import 'package:git_statistic/features/profile/data/models/user.dart';
 
 abstract class IUserDatasource {
   Future<User> getUser();

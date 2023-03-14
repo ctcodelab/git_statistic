@@ -1,4 +1,4 @@
-import 'package:iqvia_kpi/core/utils/types.dart';
+import 'package:git_statistic/core/utils/types.dart';
 
 abstract class GitService {
   Future<List<JsonMap>> getMergeRequests({

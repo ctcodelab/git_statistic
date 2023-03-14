@@ -1,10 +1,10 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:iqvia_kpi/core/utils/locator.dart';
-import 'package:iqvia_kpi/core/utils/usecase.dart';
-import 'package:iqvia_kpi/features/login/domain/usecases/login_needed_usecase.dart';
-import 'package:iqvia_kpi/features/login/domain/usecases/save_login_token_usecase.dart';
-import 'package:iqvia_kpi/features/login/domain/usecases/setup_git_service_usecase.dart';
+import 'package:git_statistic/core/utils/locator.dart';
+import 'package:git_statistic/core/utils/usecase.dart';
+import 'package:git_statistic/features/login/domain/usecases/login_needed_usecase.dart';
+import 'package:git_statistic/features/login/domain/usecases/save_login_token_usecase.dart';
+import 'package:git_statistic/features/login/domain/usecases/setup_git_service_usecase.dart';
 
 part 'login_bloc.freezed.dart';
 

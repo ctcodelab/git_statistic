@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "iqvia_kpi" "\0"
+            VALUE "FileDescription", "git_statistic" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "iqvia_kpi" "\0"
+            VALUE "InternalName", "git_statistic" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2022 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "iqvia_kpi.exe" "\0"
-            VALUE "ProductName", "iqvia_kpi" "\0"
+            VALUE "OriginalFilename", "git_statistic.exe" "\0"
+            VALUE "ProductName", "git_statistic" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

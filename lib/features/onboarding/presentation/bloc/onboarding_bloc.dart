@@ -2,17 +2,17 @@ import 'dart:async';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:iqvia_kpi/core/utils/locator.dart';
-import 'package:iqvia_kpi/core/utils/usecase.dart';
-import 'package:iqvia_kpi/features/merge_requests/domain/usecases/get_tracked_project_id.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/entities/members_entity.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/entities/project_entity.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/usecases/membership_projects_usecase.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/usecases/onboarding_completed_usecase.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/usecases/project_members_usecase.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/usecases/set_onboarding_complete.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/usecases/set_selected_project_members.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/usecases/set_tracked_project_id_usecase.dart';
+import 'package:git_statistic/core/utils/locator.dart';
+import 'package:git_statistic/core/utils/usecase.dart';
+import 'package:git_statistic/features/merge_requests/domain/usecases/get_tracked_project_id.dart';
+import 'package:git_statistic/features/onboarding/domain/entities/members_entity.dart';
+import 'package:git_statistic/features/onboarding/domain/entities/project_entity.dart';
+import 'package:git_statistic/features/onboarding/domain/usecases/membership_projects_usecase.dart';
+import 'package:git_statistic/features/onboarding/domain/usecases/onboarding_completed_usecase.dart';
+import 'package:git_statistic/features/onboarding/domain/usecases/project_members_usecase.dart';
+import 'package:git_statistic/features/onboarding/domain/usecases/set_onboarding_complete.dart';
+import 'package:git_statistic/features/onboarding/domain/usecases/set_selected_project_members.dart';
+import 'package:git_statistic/features/onboarding/domain/usecases/set_tracked_project_id_usecase.dart';
 
 part 'onboarding_bloc.freezed.dart';
 

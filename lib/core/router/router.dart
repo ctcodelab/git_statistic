@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:iqvia_kpi/core/constants/route_path.dart';
-import 'package:iqvia_kpi/core/ui/pages/home_page.dart';
-import 'package:iqvia_kpi/features/onboarding/presentation/pages/onboarding_page.dart';
+import 'package:git_statistic/core/constants/route_path.dart';
+import 'package:git_statistic/core/ui/pages/home_page.dart';
+import 'package:git_statistic/features/onboarding/presentation/pages/onboarding_page.dart';
 
 Route generateRoute(RouteSettings settings) {
   switch (settings.name) {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:iqvia_kpi/core/constants/constants.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/entities/member_entity.dart';
-import 'package:iqvia_kpi/features/onboarding/presentation/widgets/member_widget.dart';
+import 'package:git_statistic/core/constants/constants.dart';
+import 'package:git_statistic/features/onboarding/domain/entities/member_entity.dart';
+import 'package:git_statistic/features/onboarding/presentation/widgets/member_widget.dart';
 
 class SharedMemberWidget extends StatelessWidget {
   const SharedMemberWidget({
@@ -59,9 +59,8 @@ class SharedMemberWidget extends StatelessWidget {
                 ),
               ],
             ),
-            separatorBuilder: (_, index) => index + 1 != member.sharedWith.length
-                ? const Divider(thickness: 1)
-                : const SizedBox.shrink(),
+            separatorBuilder: (_, index) =>
+                index + 1 != member.sharedWith.length ? const Divider(thickness: 1) : const SizedBox.shrink(),
           ),
         ),
       ],

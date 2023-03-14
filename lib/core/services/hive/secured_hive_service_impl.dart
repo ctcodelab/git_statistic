@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:iqvia_kpi/core/services/hive/hive_service.dart';
+import 'package:git_statistic/core/services/hive/hive_service.dart';
 
 class SecuredHiveServiceImpl implements HiveService {
   late final Box _securedBox;

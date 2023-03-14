@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:gitlab/gitlab.dart';
-import 'package:iqvia_kpi/core/services/git/gitlab_service.dart';
-import 'package:iqvia_kpi/core/utils/locator.dart';
-import 'package:iqvia_kpi/core/utils/usecase.dart';
+import 'package:git_statistic/core/services/git/gitlab_service.dart';
+import 'package:git_statistic/core/utils/locator.dart';
+import 'package:git_statistic/core/utils/usecase.dart';
 
 class SetupGitServiceUsecase extends UseCase<void, String> {
   @override

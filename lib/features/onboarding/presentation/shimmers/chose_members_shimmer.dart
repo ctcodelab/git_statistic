@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:iqvia_kpi/core/constants/constants.dart';
-import 'package:iqvia_kpi/core/ui/widgets/wide_button_widget.dart';
+import 'package:git_statistic/core/constants/constants.dart';
+import 'package:git_statistic/core/ui/widgets/wide_button_widget.dart';
 import 'package:shimmer/shimmer.dart';
 
 class ChooseMembersShimmer extends StatelessWidget {

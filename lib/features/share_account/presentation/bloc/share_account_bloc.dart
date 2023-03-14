@@ -3,15 +3,15 @@ import 'dart:async';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:iqvia_kpi/core/utils/locator.dart';
-import 'package:iqvia_kpi/core/utils/usecase.dart';
-import 'package:iqvia_kpi/features/merge_requests/domain/usecases/get_saved_members_usecase.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/entities/member_entity.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/entities/members_entity.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/usecases/set_selected_project_members.dart';
-import 'package:iqvia_kpi/features/share_account/domain/entities/shared_member_entity.dart';
-import 'package:iqvia_kpi/features/share_account/domain/entities/shared_members_request_entity.dart';
-import 'package:iqvia_kpi/features/share_account/domain/usecases/update_shared_members_usecase.dart';
+import 'package:git_statistic/core/utils/locator.dart';
+import 'package:git_statistic/core/utils/usecase.dart';
+import 'package:git_statistic/features/merge_requests/domain/usecases/get_saved_members_usecase.dart';
+import 'package:git_statistic/features/onboarding/domain/entities/member_entity.dart';
+import 'package:git_statistic/features/onboarding/domain/entities/members_entity.dart';
+import 'package:git_statistic/features/onboarding/domain/usecases/set_selected_project_members.dart';
+import 'package:git_statistic/features/share_account/domain/entities/shared_member_entity.dart';
+import 'package:git_statistic/features/share_account/domain/entities/shared_members_request_entity.dart';
+import 'package:git_statistic/features/share_account/domain/usecases/update_shared_members_usecase.dart';
 
 part 'share_account_bloc.freezed.dart';
 
@@ -61,11 +61,8 @@ class ShareAccountBloc extends Bloc<ShareAccountEvent, ShareAccountState> {
       recognitionKeys: () {
         final members = getSavedMembersUseCase(const NoParams());
 
-        final sharedMembers = members.members
-            .where((e) => e.sharedWith.isNotEmpty)
-            .map((e) => e.sharedWith)
-            .expand((e) => e)
-            .toList();
+        final sharedMembers =
+            members.members.where((e) => e.sharedWith.isNotEmpty).map((e) => e.sharedWith).expand((e) => e).toSet();
 
         if (sharedMembers.isNotEmpty) {
           emit(ShareAccountState.setRecognitionKeys(sharedMembers));
@@ -134,6 +131,6 @@ class ShareAccountState with _$ShareAccountState {
   const factory ShareAccountState.members(MembersEntity members) = _Members;
 
   const factory ShareAccountState.setRecognitionKeys(
-    List<SharedMemberEntity> members,
+    Set<SharedMemberEntity> members,
   ) = _SetRecognitionKeys;
 }

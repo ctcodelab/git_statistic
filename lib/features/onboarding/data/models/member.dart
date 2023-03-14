@@ -1,11 +1,11 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/entities/member_entity.dart';
-import 'package:iqvia_kpi/features/share_account/domain/entities/shared_member_entity.dart';
+import 'package:git_statistic/features/onboarding/domain/entities/member_entity.dart';
+import 'package:git_statistic/features/share_account/domain/entities/shared_member_entity.dart';
 
 part 'member.freezed.dart';
 part 'member.g.dart';
 
-@unfreezed
+@freezed
 class Member with _$Member implements MemberEntity {
   factory Member({
     required int id,

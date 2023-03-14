@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:iqvia_kpi/core/constants/constants.dart';
-import 'package:iqvia_kpi/features/merge_requests/presentation/widgets/row_widget.dart';
-import 'package:iqvia_kpi/features/merge_requests/presentation/widgets/table_header_widget.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/entities/members_entity.dart';
+import 'package:git_statistic/core/constants/constants.dart';
+import 'package:git_statistic/features/merge_requests/presentation/widgets/row_widget.dart';
+import 'package:git_statistic/features/merge_requests/presentation/widgets/table_header_widget.dart';
+import 'package:git_statistic/features/onboarding/domain/entities/members_entity.dart';
 import 'package:shimmer/shimmer.dart';
 
 class MergeRequestShimmer extends StatelessWidget {
-  const MergeRequestShimmer({required this.members, Key? key})
-      : super(key: key);
+  const MergeRequestShimmer({required this.members, Key? key}) : super(key: key);
 
   final MembersEntity members;
 

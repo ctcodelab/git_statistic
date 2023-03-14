@@ -1,15 +1,15 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:iqvia_kpi/core/constants/constants.dart';
-import 'package:iqvia_kpi/core/ui/widgets/restart_widget.dart';
-import 'package:iqvia_kpi/core/utils/locator.dart';
-import 'package:iqvia_kpi/core/utils/usecase.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/usecases/set_onboarding_complete.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/usecases/set_tracked_project_id_usecase.dart';
-import 'package:iqvia_kpi/features/profile/domain/enteties/user_entity.dart';
-import 'package:iqvia_kpi/features/profile/domain/usecase/get_user_usecase.dart';
-import 'package:iqvia_kpi/features/profile/domain/usecase/logout_usecase.dart';
+import 'package:git_statistic/core/constants/constants.dart';
+import 'package:git_statistic/core/ui/widgets/restart_widget.dart';
+import 'package:git_statistic/core/utils/locator.dart';
+import 'package:git_statistic/core/utils/usecase.dart';
+import 'package:git_statistic/features/onboarding/domain/usecases/set_onboarding_complete.dart';
+import 'package:git_statistic/features/onboarding/domain/usecases/set_tracked_project_id_usecase.dart';
+import 'package:git_statistic/features/profile/domain/enteties/user_entity.dart';
+import 'package:git_statistic/features/profile/domain/usecase/get_user_usecase.dart';
+import 'package:git_statistic/features/profile/domain/usecase/logout_usecase.dart';
 
 part 'user_bloc.freezed.dart';
 

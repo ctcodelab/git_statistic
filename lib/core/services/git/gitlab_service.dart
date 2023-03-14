@@ -1,7 +1,7 @@
 import 'package:gitlab/gitlab.dart';
-import 'package:iqvia_kpi/core/services/git/git_service.dart';
-import 'package:iqvia_kpi/core/utils/locator.dart';
-import 'package:iqvia_kpi/core/utils/types.dart';
+import 'package:git_statistic/core/services/git/git_service.dart';
+import 'package:git_statistic/core/utils/locator.dart';
+import 'package:git_statistic/core/utils/types.dart';
 
 class GitLabService implements GitService {
   GitLabService() : gitLab = locator<GitLab>();

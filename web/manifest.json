@@ -1,6 +1,6 @@
 {
-    "name": "iqvia_kpi",
-    "short_name": "iqvia_kpi",
+    "name": "git_statistic",
+    "short_name": "git_statistic",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

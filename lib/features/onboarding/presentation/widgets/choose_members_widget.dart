@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:iqvia_kpi/core/constants/constants.dart';
-import 'package:iqvia_kpi/core/ui/header_info_widget.dart';
-import 'package:iqvia_kpi/core/ui/widgets/wide_button_widget.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/entities/member_entity.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/entities/members_entity.dart';
-import 'package:iqvia_kpi/features/onboarding/presentation/bloc/onboarding_bloc.dart';
+import 'package:git_statistic/core/constants/constants.dart';
+import 'package:git_statistic/core/ui/header_info_widget.dart';
+import 'package:git_statistic/core/ui/widgets/wide_button_widget.dart';
+import 'package:git_statistic/features/onboarding/domain/entities/member_entity.dart';
+import 'package:git_statistic/features/onboarding/domain/entities/members_entity.dart';
+import 'package:git_statistic/features/onboarding/presentation/bloc/onboarding_bloc.dart';
 
 class ChooseMembersWidget extends StatefulWidget {
   const ChooseMembersWidget({
@@ -59,9 +59,7 @@ class _ChooseMembersWidgetState extends State<ChooseMembersWidget> {
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       border: Border.all(
-                        color: !selectedMembers.contains(widget.members[index])
-                            ? AppColors.text600
-                            : AppColors.blue,
+                        color: !selectedMembers.contains(widget.members[index]) ? AppColors.text600 : AppColors.blue,
                       ),
                       borderRadius: BorderRadius.circular(5),
                       color: !selectedMembers.contains(widget.members[index])

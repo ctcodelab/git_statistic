@@ -1,6 +1,6 @@
-import 'package:iqvia_kpi/features/onboarding/data/models/members.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/entities/members_entity.dart';
-import 'package:iqvia_kpi/features/onboarding/domain/entities/project_entity.dart';
+import 'package:git_statistic/features/onboarding/data/models/members.dart';
+import 'package:git_statistic/features/onboarding/domain/entities/members_entity.dart';
+import 'package:git_statistic/features/onboarding/domain/entities/project_entity.dart';
 
 abstract class OnboardingRepository {
   bool onboardingPassed();

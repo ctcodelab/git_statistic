@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
-import 'package:iqvia_kpi/core/constants/constants.dart';
-import 'package:iqvia_kpi/core/utils/calendar.dart';
-import 'package:iqvia_kpi/features/merge_requests/presentation/widgets/merge_request_widget.dart';
-import 'package:iqvia_kpi/features/profile/presentation/bloc/user_bloc.dart';
-import 'package:iqvia_kpi/features/profile/presentation/widgets/user_widget.dart';
+import 'package:git_statistic/core/constants/constants.dart';
+import 'package:git_statistic/core/utils/calendar.dart';
+import 'package:git_statistic/features/merge_requests/presentation/widgets/merge_request_widget.dart';
+import 'package:git_statistic/features/profile/presentation/bloc/user_bloc.dart';
+import 'package:git_statistic/features/profile/presentation/widgets/user_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
