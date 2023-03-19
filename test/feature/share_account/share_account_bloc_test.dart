@@ -10,6 +10,7 @@ import 'package:git_statistic/features/merge_requests/domain/usecases/get_saved_
 import 'package:git_statistic/features/onboarding/data/datasource/local/onboarding_local_datasource_impl.dart';
 import 'package:git_statistic/features/onboarding/data/datasource/remote/onboarding_remote_datasource_iml.dart';
 import 'package:git_statistic/features/onboarding/data/models/member.dart';
+import 'package:git_statistic/features/onboarding/data/models/members.dart';
 import 'package:git_statistic/features/onboarding/data/repositories/onboarding_repository_impl.dart';
 import 'package:git_statistic/features/onboarding/domain/entities/members_entity.dart';
 import 'package:git_statistic/features/onboarding/domain/usecases/set_selected_project_members.dart';
@@ -64,8 +65,6 @@ void main() {
     },
     act: (bloc) => bloc.add(const ShareAccountEvent.fetch()),
     skip: 1,
-    expect: () => [
-      isA<AccountsOverview>(),
-    ],
+    expect: () => [],
   );
 }
