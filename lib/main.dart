@@ -12,8 +12,8 @@ void main() async {
 
   locator.registerLazySingleton(() => HiveServiceImpl());
   locator.registerLazySingleton(() => SecuredHiveServiceImpl());
-  await locator<HiveServiceImpl>().init('_preferences');
-  await locator<SecuredHiveServiceImpl>().init('_securedBox');
+  await locator<HiveServiceImpl>().init(HiveBox.preferencesBox);
+  await locator<SecuredHiveServiceImpl>().init(HiveBox.securedBox);
   setUpLocator();
 
   runApp(
