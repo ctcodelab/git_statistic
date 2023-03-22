@@ -221,8 +221,8 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: ffd341f6de515b3b59c0d4318924c5d4fe450a9b
-      url: "git@github.com:ctcodelab/flutter_gitlab.git"
+      resolved-ref: "8ac52688bad6ae701649b1cfa139e21762bded57"
+      url: "https://github.com/ctcodelab/flutter_gitlab.git"
     source: git
     version: "0.0.1"
   flutter_lints:

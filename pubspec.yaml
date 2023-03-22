@@ -15,7 +15,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_gitlab:
     git:
-      url: git@github.com:ctcodelab/flutter_gitlab.git
+      url: https://github.com/ctcodelab/flutter_gitlab.git
   freezed_annotation: ^2.0.1
   flutter_bloc: ^8.0.1
   json_annotation: ^4.5.0
