@@ -1,5 +1,7 @@
 # git_statistic
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ctcodelab_git_statistic&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ctcodelab_git_statistic)
+
 A new Flutter project.
 
 ## Getting Started
