@@ -1,6 +1,13 @@
 # git_statistic
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ctcodelab_git_statistic&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ctcodelab_git_statistic)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=ctcodelab_git_statistic&metric=bugs)](https://sonarcloud.io/summary/new_code?id=ctcodelab_git_statistic)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=ctcodelab_git_statistic&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=ctcodelab_git_statistic)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=ctcodelab_git_statistic&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=ctcodelab_git_statistic)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=ctcodelab_git_statistic&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=ctcodelab_git_statistic)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ctcodelab_git_statistic&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=ctcodelab_git_statistic)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ctcodelab_git_statistic&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=ctcodelab_git_statistic)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=ctcodelab_git_statistic&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=ctcodelab_git_statistic)
 
 A new Flutter project.
 
