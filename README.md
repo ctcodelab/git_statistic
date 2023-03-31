@@ -1,5 +1,14 @@
 # Git Statistics Tracker
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ctcodelab_git_statistic&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ctcodelab_git_statistic)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=ctcodelab_git_statistic&metric=bugs)](https://sonarcloud.io/summary/new_code?id=ctcodelab_git_statistic)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=ctcodelab_git_statistic&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=ctcodelab_git_statistic)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=ctcodelab_git_statistic&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=ctcodelab_git_statistic)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=ctcodelab_git_statistic&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=ctcodelab_git_statistic)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ctcodelab_git_statistic&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=ctcodelab_git_statistic)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ctcodelab_git_statistic&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=ctcodelab_git_statistic)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=ctcodelab_git_statistic&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=ctcodelab_git_statistic)
+
 This is a multi-platform Flutter project that enables the developer team to track and display the statistics of merge requests for particular projects. The project can be used to monitor the number of merge requests, their status, and their progress in real-time.
 
 ## Features
